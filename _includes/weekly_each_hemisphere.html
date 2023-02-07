@@ -1,0 +1,100 @@
+<div class="tabsweekly">
+  <input type="radio" name="tabsweekly" id="taboneweekly" checked="checked">
+  <label for="taboneweekly">Northern Hemisphere</label>
+  <div class="tab">
+    <iframe
+      id="northernhemisphereweekly"
+      title=""
+      src="../../assets/data/02-01-2023/weekly_each_hemisphere/HemisphereWeekly_Northern hemisphere.html"
+      frameborder="0"
+      width="100%"
+      height="600"
+      allowtransparency
+    ></iframe>
+  </div>
+
+  <input type="radio" name="tabsweekly" id="tabtwoweekly">
+  <label for="tabtwoweekly">Southern Hemisphere</label>
+  <div class="tab">
+    <iframe
+      id="southernhemisphereweekly"
+      title=""
+      src="../../assets/data/02-01-2023/weekly_each_hemisphere/HemisphereWeekly_Southern hemisphere.html"
+      frameborder="0"
+      width="100%"
+      height="600"
+      allowtransparency
+    ></iframe>
+  </div>
+</div>
+
+<style>
+  /**
+ * Tabs
+ */
+  .tabsweekly {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tabsweekly label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    margin-bottom:0;
+  }
+  .tabsweekly .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+  }
+  .tabsweekly input[type="radio"] {
+    display: none;
+  }
+  .tabsweekly input[type="radio"]:checked + label {
+    background: #fff;
+    color: #333;
+  }
+  .tabsweekly input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+
+  @media (max-width: 45em) {
+    .tabsweekly .tab,
+    .tabsweekly label {
+      order: initial;
+    }
+    .tabsweekly label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+</style>
+
+<script>
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  if(getCookie("archive") !== null) {
+    document.getElementById("northernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/HemisphereWeekly_Northern hemisphere.html"
+    document.getElementById("southernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/HemisphereWeekly_Southern hemisphere.html"
+  }
+</script>

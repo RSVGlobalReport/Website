@@ -1,0 +1,100 @@
+<div class="tabsyearly">
+  <input type="radio" name="tabsyearly" id="taboneyearly" checked="checked">
+  <label for="taboneyearly">Northern Hemisphere</label>
+  <div class="tab">
+    <iframe
+      id="northernhemisphereyearly"
+      title=""
+      src="../../assets/data/02-01-2023/yearOnyear_each_hemisphere/HemisphereYearly_Northern hemisphere.html"
+      frameborder="0"
+      width="100%"
+      height="600"
+      allowtransparency
+    ></iframe>
+  </div>
+
+  <input type="radio" name="tabsyearly" id="tabtwoyearly">
+  <label for="tabtwoyearly">Southern Hemisphere</label>
+  <div class="tab">
+    <iframe
+      id="southernhemisphereyearly"
+      title=""
+      src="../../assets/data/02-01-2023/yearOnyear_each_hemisphere/HemisphereYearly_Southern hemisphere.html"
+      frameborder="0"
+      width="100%"
+      height="600"
+      allowtransparency
+    ></iframe>
+  </div>
+</div>
+
+<style>
+  /**
+ * Tabs
+ */
+  .tabsyearly {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tabsyearly label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    margin-bottom:0;
+  }
+  .tabsyearly .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+  }
+  .tabsyearly input[type="radio"] {
+    display: none;
+  }
+  .tabsyearly input[type="radio"]:checked + label {
+    background: #fff;
+    color: #333;
+  }
+  .tabsyearly input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+
+  @media (max-width: 45em) {
+    .tabsyearly .tab,
+    .tabsyearly label {
+      order: initial;
+    }
+    .tabsyearly label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+</style>
+
+<script>
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  if(getCookie("archive") !== null) {
+    document.getElementById("northernhemisphereyearly").src = "../../assets/data/" + getCookie("archive") + "/yearOnyear_each_hemisphere/HemisphereYearly_Northern hemisphere.html"
+    document.getElementById("southernhemisphereyearly").src = "../../assets/data/" + getCookie("archive") + "/yearOnyear_each_hemisphere/HemisphereYearly_Southern hemisphere.html"
+  }
+</script>

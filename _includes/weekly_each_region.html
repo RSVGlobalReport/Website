@@ -1,0 +1,44 @@
+<select id="weekly-region-selector">
+  <option value="Africa" selected="selected">Africa</option>
+  <option value="Americas" >Americas</option>
+  <option value="Eastern Mediterranean" >Eastern Mediterranean</option>
+  <option value="Europe" >Europe</option>
+  <option value="South East Asia" >South East Asia</option>
+  <option value="Western Pacific" >Western Pacific</option>
+</select>
+<iframe
+  id="weekly-region-selected-iframe"
+  title=""
+  src="../../assets/data/02-01-2023/weekly_each_region/RegionWeekly_Africa.html"
+  frameborder="0"
+  width="100%"
+  height="600"
+  allowtransparency
+></iframe>
+
+<script>
+  const weeklyRegionSelector = document.getElementById('weekly-region-selector');
+  const weeklyRegionIframe = document.getElementById('weekly-region-selected-iframe');
+
+  let archiveValRegionWeekly = "02-01-2023";
+
+  if(getCookie("archive") !== null) {
+    archiveValRegionWeekly = getCookie("archive");
+    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegionWeekly + "/weekly_each_region/RegionWeekly_Africa.html";
+  }
+
+  weeklyRegionSelector.addEventListener('change',function(event) {
+    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegionWeekly + "/weekly_each_region/RegionWeekly_" + weeklyRegionSelector.value + ".html";
+  })
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>

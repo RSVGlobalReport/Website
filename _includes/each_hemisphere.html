@@ -1,0 +1,232 @@
+<div class="tabs">
+  <input type="radio" name="tabs" id="tabone" checked="checked">
+  <label for="tabone">Northern Hemisphere</label>
+  <div class="tab">
+    <div class="tabsnorthern">
+      <input type="radio" name="tabsnorthern" id="tabsnortherncovid" checked="checked">
+      <label for="tabsnortherncovid">Covid Impact</label>
+      <div class="tab">
+        <iframe
+          id="northernhemisphere"
+          title=""
+          src="../../assets/data/02-02-2023/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="tabsnorthern" id="tabsnorthernweekly">
+      <label for="tabsnorthernweekly">Weekly</label>
+      <div class="tab">
+        <iframe
+          id="northernhemisphereweekly"
+          title=""
+          src="../../assets/data/02-02-2023/weekly_each_hemisphere/weekly_Northern hemisphere.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="tabsnorthern" id="tabsnorthernyearly">
+      <label for="tabsnorthernyearly">Time Series</label>
+      <div class="tab">
+        <iframe
+          id="northernhemispheretimeseries"
+          title=""
+          src="../../assets/data/02-02-2023/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Secondary Tab System End -->
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo">
+  <label for="tabtwo">Southern Hemisphere</label>
+  <div class="tab">
+
+    <!-- Secondary Tab System Start -->
+
+    <div class="tabssouthern">
+      <input type="radio" name="tabssouthern" id="tabssoutherncovid" checked="checked">
+      <label for="tabssoutherncovid">Covid Impact</label>
+      <div class="tab">
+        <iframe
+          id="southernhemisphere"
+          title=""
+          src="../../assets/data/02-02-2023/covidimpact_each_hemisphere/covidimpact_Southern hemisphere.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="tabssouthern" id="tabssouthernweekly">
+      <label for="tabssouthernweekly">Weekly</label>
+      <div class="tab">
+        <iframe
+          id="southernhemisphereweekly"
+          title=""
+          src="../../assets/data/02-02-2023/weekly_each_hemisphere/weekly_Southern hemisphere.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="tabssouthern" id="tabssouthernyearly">
+      <label for="tabssouthernyearly">Time Series</label>
+      <div class="tab">
+        <iframe
+          id="southernhemispheretimeseries"
+          title=""
+          src="../../assets/data/02-02-2023/timeseries_each_hemisphere/timeseries_Southern hemisphere.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Secondary Tab System End -->
+  </div>
+</div>
+
+<style>
+  /**
+ * Tabs
+ */
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tabs label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    margin-bottom:0;
+  }
+  .tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #ddd;
+  }
+  .tabs input[type="radio"] {
+    display: none;
+  }
+  .tabs input[type="radio"]:checked + label {
+    background: #ddd;
+    color: #333;
+  }
+  .tabs input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+
+  @media (max-width: 45em) {
+    .tabs .tab,
+    .tabs label {
+      order: initial;
+    }
+    .tabs label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+</style>
+<style>
+  /**
+ * Sub Tabs
+ */
+  .tabssouthern, .tabsnorthern {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tabssouthern label, .tabsnorthern label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    margin-bottom:0;
+  }
+  .tabssouthern .tab, .tabsnorthern .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+  }
+  .tabssouthern input[type="radio"], .tabsnorthern input[type="radio"] {
+    display: none;
+  }
+  .tabssouthern input[type="radio"]:checked + label, .tabsnorthern input[type="radio"]:checked + label {
+    background: #fff;
+    color: #333;
+  }
+  .tabssouthern input[type="radio"]:checked + label + .tab, .tabsnorthern input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+
+  @media (max-width: 45em) {
+    .tabssouthern .tab, .tabsnorthern .tab,
+    .tabssouthern label, .tabsnorthern  label {
+      order: initial;
+    }
+    .tabssouthern label, .tabsnorthern  label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+</style>
+
+<script>
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  if(getCookie("archive") !== null) {
+    document.getElementById("northernhemisphere").src = "../../assets/data/" + getCookie("archive") + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
+    document.getElementById("northernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/weekly_Northern hemisphere.html"
+    document.getElementById("northernhemispheretimeseries").src = "../../assets/data/" + getCookie("archive") + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
+
+    document.getElementById("southernhemisphere").src = "../../assets/data/" + getCookie("archive") + "/covidimpact_each_hemisphere/covidimpact_Southern hemisphere.html"
+    document.getElementById("southernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/weekly_Southern hemisphere.html"
+    document.getElementById("southernhemispheretimeseries").src = "../../assets/data/" + getCookie("archive") + "/timeseries_each_hemisphere/timeseries_Southern hemisphere.html"
+  }
+</script>

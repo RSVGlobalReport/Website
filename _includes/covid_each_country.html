@@ -1,0 +1,81 @@
+<select id="country-selector">
+  <option value="Argentina" selected="selected">Argentina</option>
+  <option value="Australia" >Australia</option>
+  <option value="Belize" >Belize</option>
+  <option value="Brazil" >Brazil</option>
+  <option value="Bulgaria" >Bulgaria</option>
+  <option value="Canada" >Canada</option>
+  <option value="Central African Republic" >Central African Republic</option>
+  <option value="Colombia" >Colombia</option>
+  <option value="Costa Rica" >Costa Rica</option>
+  <option value="Cote" >Côte d'Ivoire</option>
+  <option value="Denmark" >Denmark</option>
+  <option value="Dominica" >Dominica</option>
+  <option value="Ecuador" >Ecuador</option>
+  <option value="El Salvador" >El Salvador</option>
+  <option value="England" >England</option>
+  <option value="France" >France</option>
+  <option value="Germany" >Germany</option>
+  <option value="Guatemala" >Guatemala</option>
+  <option value="Honduras" >Honduras</option>
+  <option value="Hungary" >Hungary</option>
+  <option value="Iceland" >Iceland</option>
+  <option value="India" >India</option>
+  <option value="Ireland" >Ireland</option>
+  <option value="Japan" >Japan</option>
+  <option value="Madagascar" >Madagascar</option>
+  <option value="Malaysia" >Malaysia</option>
+  <option value="Mexico" >Mexico</option>
+  <option value="Mongolia" >Mongolia</option>
+  <option value="Netherlands" >Netherlands</option>
+  <option value="Nicaragua" >Nicaragua</option>
+  <option value="Northern Ireland" >Northern Ireland</option>
+  <option value="Oman" >Oman</option>
+  <option value="Panama" >Panama</option>
+  <option value="Paraguay" >Paraguay</option>
+  <option value="Peru" >Peru</option>
+  <option value="Portugal" >Portugal</option>
+  <option value="Qatar" >Qatar</option>
+  <option value="Scotland" >Scotland</option>
+  <option value="Slovakia" >Slovakia</option>
+  <option value="South Africa" >South Africa</option>
+  <option value="Spain" >Spain</option>
+  <option value="Sweden" >Sweden</option>
+  <option value="Uruguay" >Uruguay</option>
+</select>
+<iframe
+  id="country-selected-iframe"
+  title=""
+  src="../../assets/data/02-01-2023/covid_each_country/CountryCovid_Argentina.html"
+  frameborder="0"
+  width="100%"
+  height="600"
+  allowtransparency
+></iframe>
+
+<script>
+  const countrySelector = document.getElementById('country-selector');
+  const countryIframe = document.getElementById('country-selected-iframe');
+
+  let archiveVal = "02-01-2023";
+
+  if(getCookie("archive") !== null) {
+    archiveVal = getCookie("archive");
+    countryIframe.src = "../../assets/data/" + archiveVal + "/covid_each_country/CountryCovid_Argentina.html";
+  }
+
+  countrySelector.addEventListener('change',function(event) {
+    countryIframe.src = "../../assets/data/" + archiveVal + "/covid_each_country/CountryCovid_" + countrySelector.value + ".html";
+  })
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
