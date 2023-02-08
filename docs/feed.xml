@@ -4,7 +4,7 @@
   <id>https://rsvglobalreport.github.io/dashboard/</id>
   <title>RSV Global</title>
   <subtitle>Understanding the patterns of global re-emergence of RSV following COVID19 pandemic</subtitle>
-  <updated>2023-02-07T22:38:37-05:00</updated>
+  <updated>2023-02-07T22:56:31-05:00</updated>
   <author>
     <name>Weinberger Lab</name>
     <uri>https://rsvglobalreport.github.io/dashboard/</uri>
@@ -14,8 +14,8 @@
     href="https://rsvglobalreport.github.io/dashboard/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator>
   <rights> © 2023 Weinberger Lab </rights>
-  <icon>/assets/img/favicons/favicon.ico</icon>
-  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>/dashboard/assets/img/favicons/favicon.ico</icon>
+  <logo>/dashboard/assets/img/favicons/favicon-96x96.png</logo>
 
 
   

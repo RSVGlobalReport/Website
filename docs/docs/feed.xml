@@ -1,33 +1,33 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://rsvglobalreport.github.io//Website/</id>
+  <id>https://rsvglobalreport.github.io/dashboard/</id>
   <title>RSV Global</title>
   <subtitle>Understanding the patterns of global re-emergence of RSV following COVID19 pandemic</subtitle>
-  <updated>2023-02-07T21:23:44-05:00</updated>
+  <updated>2023-02-07T22:38:37-05:00</updated>
   <author>
     <name>Weinberger Lab</name>
-    <uri>https://rsvglobalreport.github.io//Website/</uri>
+    <uri>https://rsvglobalreport.github.io/dashboard/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="https://rsvglobalreport.github.io//Website/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://rsvglobalreport.github.io/dashboard/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="https://rsvglobalreport.github.io//Website/"/>
+    href="https://rsvglobalreport.github.io/dashboard/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator>
   <rights> © 2023 Weinberger Lab </rights>
-  <icon>/Website/assets/img/favicons/favicon.ico</icon>
-  <logo>/Website/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
     <title>Understanding the patterns of global re-emergence of RSV following COVID19 pandemic</title>
-    <link href="https://rsvglobalreport.github.io//Website/posts/dashboard/" rel="alternate" type="text/html" title="Understanding the patterns of global re-emergence of RSV following COVID19 pandemic" />
+    <link href="https://rsvglobalreport.github.io/dashboard/posts/dashboard/" rel="alternate" type="text/html" title="Understanding the patterns of global re-emergence of RSV following COVID19 pandemic" />
     <published>2023-01-23T22:33:00-05:00</published>
   
     <updated>2023-01-23T22:33:00-05:00</updated>
   
-    <id>https://rsvglobalreport.github.io//Website/posts/dashboard/</id>
-    <content src="https://rsvglobalreport.github.io//Website/posts/dashboard/" />
+    <id>https://rsvglobalreport.github.io/dashboard/posts/dashboard/</id>
+    <content src="https://rsvglobalreport.github.io/dashboard/posts/dashboard/" />
     <author>
       <name>lab</name>
     </author>

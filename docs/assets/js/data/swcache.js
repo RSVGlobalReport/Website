@@ -1,46 +1,46 @@
 const resource = [
     /* --- CSS --- */
-    '/assets/css/style.css',
+    '/dashboard/assets/css/style.css',
 
     /* --- PWA --- */
-    '/app.js',
-    '/sw.js',
+    '/dashboard/app.js',
+    '/dashboard/sw.js',
 
     /* --- HTML --- */
-    '/index.html',
-    '/404.html',
+    '/dashboard/index.html',
+    '/dashboard/404.html',
 
     
-        '/categories/',
+        '/dashboard/categories/',
     
-        '/archives/',
+        '/dashboard/archives/',
     
 
     /* --- Favicons & compressed JS --- */
     
     
-        '/assets/img/favicons/android-chrome-192x192.png',
-        '/assets/img/favicons/android-chrome-512x512.png',
-        '/assets/img/favicons/apple-touch-icon.png',
-        '/assets/img/favicons/favicon-16x16.png',
-        '/assets/img/favicons/favicon-32x32.png',
-        '/assets/img/favicons/favicon.ico',
-        '/assets/img/favicons/site.webmanifest',
-        '/assets/img/favicons/mstile-150x150.png',
-        '/assets/js/dist/categories.min.js',
-        '/assets/js/dist/commons.min.js',
-        '/assets/js/dist/home.min.js',
-        '/assets/js/dist/misc.min.js',
-        '/assets/js/dist/page.min.js',
-        '/assets/js/dist/post.min.js',
-        '/assets/js/dist/pvreport.min.js'
+        '/dashboard/assets/img/favicons/android-chrome-192x192.png',
+        '/dashboard/assets/img/favicons/android-chrome-512x512.png',
+        '/dashboard/assets/img/favicons/apple-touch-icon.png',
+        '/dashboard/assets/img/favicons/favicon-16x16.png',
+        '/dashboard/assets/img/favicons/favicon-32x32.png',
+        '/dashboard/assets/img/favicons/favicon.ico',
+        '/dashboard/assets/img/favicons/site.webmanifest',
+        '/dashboard/assets/img/favicons/mstile-150x150.png',
+        '/dashboard/assets/js/dist/categories.min.js',
+        '/dashboard/assets/js/dist/commons.min.js',
+        '/dashboard/assets/js/dist/home.min.js',
+        '/dashboard/assets/js/dist/misc.min.js',
+        '/dashboard/assets/js/dist/page.min.js',
+        '/dashboard/assets/js/dist/post.min.js',
+        '/dashboard/assets/js/dist/pvreport.min.js'
 ];
 
 /* The request url with below domain will be cached */
 const allowedDomains = [
     
 
-    'rsvglobalreport.github.io/dashboard',
+    'rsvglobalreport.github.io',
 
     
         'localhost:4000',
