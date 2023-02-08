@@ -19,3 +19,5 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 gem "sass-embedded", "1.54"
+
+gem "jekyll", "~> 4.3"
