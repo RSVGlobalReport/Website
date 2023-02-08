@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://rsvglobalreport.github.io//Website/sitemap.xml
+Sitemap: https://rsvglobalreport.github.io/dashboard/sitemap.xml
