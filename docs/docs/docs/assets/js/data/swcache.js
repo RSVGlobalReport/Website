@@ -1,46 +1,46 @@
 const resource = [
     /* --- CSS --- */
-    '/Website/assets/css/style.css',
+    '/assets/css/style.css',
 
     /* --- PWA --- */
-    '/Website/app.js',
-    '/Website/sw.js',
+    '/app.js',
+    '/sw.js',
 
     /* --- HTML --- */
-    '/Website/index.html',
-    '/Website/404.html',
+    '/index.html',
+    '/404.html',
 
     
-        '/Website/categories/',
+        '/categories/',
     
-        '/Website/archives/',
+        '/archives/',
     
 
     /* --- Favicons & compressed JS --- */
     
     
-        '/Website/assets/img/favicons/android-chrome-192x192.png',
-        '/Website/assets/img/favicons/android-chrome-512x512.png',
-        '/Website/assets/img/favicons/apple-touch-icon.png',
-        '/Website/assets/img/favicons/favicon-16x16.png',
-        '/Website/assets/img/favicons/favicon-32x32.png',
-        '/Website/assets/img/favicons/favicon.ico',
-        '/Website/assets/img/favicons/site.webmanifest',
-        '/Website/assets/img/favicons/mstile-150x150.png',
-        '/Website/assets/js/dist/categories.min.js',
-        '/Website/assets/js/dist/commons.min.js',
-        '/Website/assets/js/dist/home.min.js',
-        '/Website/assets/js/dist/misc.min.js',
-        '/Website/assets/js/dist/page.min.js',
-        '/Website/assets/js/dist/post.min.js',
-        '/Website/assets/js/dist/pvreport.min.js'
+        '/assets/img/favicons/android-chrome-192x192.png',
+        '/assets/img/favicons/android-chrome-512x512.png',
+        '/assets/img/favicons/apple-touch-icon.png',
+        '/assets/img/favicons/favicon-16x16.png',
+        '/assets/img/favicons/favicon-32x32.png',
+        '/assets/img/favicons/favicon.ico',
+        '/assets/img/favicons/site.webmanifest',
+        '/assets/img/favicons/mstile-150x150.png',
+        '/assets/js/dist/categories.min.js',
+        '/assets/js/dist/commons.min.js',
+        '/assets/js/dist/home.min.js',
+        '/assets/js/dist/misc.min.js',
+        '/assets/js/dist/page.min.js',
+        '/assets/js/dist/post.min.js',
+        '/assets/js/dist/pvreport.min.js'
 ];
 
 /* The request url with below domain will be cached */
 const allowedDomains = [
     
 
-    'rsvglobalreport.github.io/',
+    'rsvglobalreport.github.io/dashboard',
 
     
         'localhost:4000',

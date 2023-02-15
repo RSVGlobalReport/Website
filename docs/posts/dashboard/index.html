@@ -41,15 +41,15 @@
 <meta property="og:locale" content="en" />
 <meta name="description" content="Version Select: 02-02-2023" />
 <meta property="og:description" content="Version Select: 02-02-2023" />
-<link rel="canonical" href="https://rsvglobalreport.github.io/dashboard/posts/dashboard/" />
-<meta property="og:url" content="https://rsvglobalreport.github.io/dashboard/posts/dashboard/" />
+<link rel="canonical" href="http://localhost:4000/dashboard/posts/dashboard/" />
+<meta property="og:url" content="http://localhost:4000/dashboard/posts/dashboard/" />
 <meta property="og:site_name" content="RSV Global" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-01-23T22:33:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Understanding the patterns of global re-emergence of RSV following COVID19 pandemic" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"RSV Global Report","url":"https://github.com/RSVGlobalReport/"},"dateModified":"2023-01-23T22:33:00-05:00","datePublished":"2023-01-23T22:33:00-05:00","description":"Version Select: 02-02-2023","headline":"Understanding the patterns of global re-emergence of RSV following COVID19 pandemic","mainEntityOfPage":{"@type":"WebPage","@id":"https://rsvglobalreport.github.io/dashboard/posts/dashboard/"},"url":"https://rsvglobalreport.github.io/dashboard/posts/dashboard/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"RSV Global Report","url":"https://github.com/RSVGlobalReport/"},"dateModified":"2023-01-23T22:33:00-05:00","datePublished":"2023-01-23T22:33:00-05:00","description":"Version Select: 02-02-2023","headline":"Understanding the patterns of global re-emergence of RSV following COVID19 pandemic","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dashboard/posts/dashboard/"},"url":"http://localhost:4000/dashboard/posts/dashboard/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -267,7 +267,7 @@
       <a href="/dashboard/" class="mx-auto">
         
           
-          <img src="http://localhost:4000/assets/img/logo.jpg" alt="avatar" onerror="this.style.display='none'">
+          <img src="https://rsvglobalreport.github.io/dashboard/assets/img/logo.png" alt="avatar" onerror="this.style.display='none'">
         
       </a>
     </div>
@@ -628,7 +628,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="230 words">
+  title="297 words">
   <em>1 min</em> read</span>
 
     </div>
@@ -682,117 +682,51 @@
 </script>
 
 <h2 id="rsv-cases-by-hemisphere"><span class="mr-2">RSV Cases By Hemisphere</span><a href="#rsv-cases-by-hemisphere" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<div class="tabs">
-  <input type="radio" name="tabs" id="tabone" checked="checked" />
-  <label for="tabone">Northern Hemisphere</label>
-  <div class="tab">
+<div class="tab">
     <div class="tabsnorthern">
-      <input type="radio" name="tabsnorthern" id="tabsnortherncovid" checked="checked" />
-      <label for="tabsnortherncovid">Covid Impact</label>
+      <input type="radio" name="tabsnorthern" id="tabsnorthernyearly" checked="checked" />
+      <label for="tabsnorthernyearly">Time Series</label>
       <div class="tab">
-        <iframe id="northernhemisphere" title="" src="../../assets/data/02-02-2023/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <label for="hemisphere-time-series-selector" class="sub-label">Hemisphere:</label>
+        <select id="hemisphere-time-series-selector">
+          <option value="Northern" selected="selected">Northern</option>
+          <option value="Southern">Southern</option>
+        </select>
+        <iframe id="northernhemispheretimeseries" title="" src="../../assets/data/02-02-2023/timeseries_each_hemisphere/timeseries_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
       <input type="radio" name="tabsnorthern" id="tabsnorthernweekly" />
-      <label for="tabsnorthernweekly">Weekly</label>
+      <label for="tabsnorthernweekly">Weekly Dynamics</label>
       <div class="tab">
+        <label for="hemisphere-weekly-selector" class="sub-label">Hemisphere:</label>
+        <select id="hemisphere-weekly-selector">
+          <option value="Northern" selected="selected">Northern</option>
+          <option value="Southern">Southern</option>
+        </select>
         <iframe id="northernhemisphereweekly" title="" src="../../assets/data/02-02-2023/weekly_each_hemisphere/weekly_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
-      <input type="radio" name="tabsnorthern" id="tabsnorthernyearly" />
-      <label for="tabsnorthernyearly">Time Series</label>
+      <input type="radio" name="tabsnorthern" id="tabsnortherncovid" />
+      <label for="tabsnortherncovid">Pre vs Post COVID</label>
       <div class="tab">
-        <iframe id="northernhemispheretimeseries" title="" src="../../assets/data/02-02-2023/timeseries_each_hemisphere/timeseries_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <label for="hemisphere-covid-selector" class="sub-label">Hemisphere:</label>
+        <select id="hemisphere-covid-selector">
+          <option value="Northern" selected="selected">Northern</option>
+          <option value="Southern">Southern</option>
+        </select>
+        <iframe id="northernhemisphere" title="" src="../../assets/data/02-02-2023/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
+
     </div>
-
-    <!-- Secondary Tab System End -->
   </div>
-
-  <input type="radio" name="tabs" id="tabtwo" />
-  <label for="tabtwo">Southern Hemisphere</label>
-  <div class="tab">
-
-    <!-- Secondary Tab System Start -->
-
-    <div class="tabssouthern">
-      <input type="radio" name="tabssouthern" id="tabssoutherncovid" checked="checked" />
-      <label for="tabssoutherncovid">Covid Impact</label>
-      <div class="tab">
-        <iframe id="southernhemisphere" title="" src="../../assets/data/02-02-2023/covidimpact_each_hemisphere/covidimpact_Southern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
-      </div>
-
-      <input type="radio" name="tabssouthern" id="tabssouthernweekly" />
-      <label for="tabssouthernweekly">Weekly</label>
-      <div class="tab">
-        <iframe id="southernhemisphereweekly" title="" src="../../assets/data/02-02-2023/weekly_each_hemisphere/weekly_Southern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
-      </div>
-
-      <input type="radio" name="tabssouthern" id="tabssouthernyearly" />
-      <label for="tabssouthernyearly">Time Series</label>
-      <div class="tab">
-        <iframe id="southernhemispheretimeseries" title="" src="../../assets/data/02-02-2023/timeseries_each_hemisphere/timeseries_Southern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
-      </div>
-    </div>
-
-    <!-- Secondary Tab System End -->
-  </div>
-</div>
 
 <style>
-  /**
- * Tabs
- */
-  .tabs {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .tabs label {
-    order: 1;
-    display: block;
-    padding: 1rem 2rem;
-    margin-right: 0.2rem;
-    cursor: pointer;
-    background: #333;
-    color: #fff;
-    font-weight: bold;
-    transition: background ease 0.2s;
-    margin-bottom:0;
-  }
-  .tabs .tab {
-    order: 99;
-    flex-grow: 1;
-    width: 100%;
-    display: none;
-    padding: 1rem;
-    background: #ddd;
-  }
-  .tabs input[type="radio"] {
-    display: none;
-  }
-  .tabs input[type="radio"]:checked + label {
-    background: #ddd;
+  .tabsnorthern label.sub-label {
+    background: transparent;
+    display: inline;
     color: #333;
+    padding: 0;
   }
-  .tabs input[type="radio"]:checked + label + .tab {
-    display: block;
-  }
-
-  @media (max-width: 45em) {
-    .tabs .tab,
-    .tabs label {
-      order: initial;
-    }
-    .tabs label {
-      width: 100%;
-      margin-right: 0;
-      margin-top: 0.2rem;
-    }
-  }
-
-</style>
-
-<style>
   /**
  * Sub Tabs
  */
@@ -861,19 +795,327 @@
     document.getElementById("northernhemisphere").src = "../../assets/data/" + getCookie("archive") + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
     document.getElementById("northernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/weekly_Northern hemisphere.html"
     document.getElementById("northernhemispheretimeseries").src = "../../assets/data/" + getCookie("archive") + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
-
-    document.getElementById("southernhemisphere").src = "../../assets/data/" + getCookie("archive") + "/covidimpact_each_hemisphere/covidimpact_Southern hemisphere.html"
-    document.getElementById("southernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/weekly_Southern hemisphere.html"
-    document.getElementById("southernhemispheretimeseries").src = "../../assets/data/" + getCookie("archive") + "/timeseries_each_hemisphere/timeseries_Southern hemisphere.html"
   }
+</script>
+
+<script>
+  const hemisphereTimeSeriesSelector = document.getElementById('hemisphere-time-series-selector');
+  const hemisphereWeeklySelector = document.getElementById('hemisphere-weekly-selector');
+  const hemisphereCovidSelector = document.getElementById('hemisphere-covid-selector');
+  const hemisphereCovidIframe = document.getElementById('northernhemisphere');
+  const hemisphereWeeklyIframe = document.getElementById('northernhemisphereweekly');
+  const hemisphereTimeSeriesIframe = document.getElementById('northernhemispheretimeseries');
+
+  let archiveValHemisphere = "02-02-2023";
+
+  if(getCookie("archive") !== null) {
+    archiveValHemisphere = getCookie("archive");
+    hemisphereCovidIframe.src = "../../assets/data/" + archiveValHemisphere + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html";
+    hemisphereWeeklyIframe.src = "../../assets/data/" + archiveValHemisphere + "/weekly_each_hemisphere/weekly_Northern hemisphere.html";
+    hemisphereTimeSeriesIframe.src = "../../assets/data/" + archiveValHemisphere + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html";
+  }
+
+  hemisphereCovidSelector.addEventListener('change',function(event) {
+    hemisphereCovidIframe.src = "../../assets/data/" + archiveValHemisphere + "/covidimpact_each_hemisphere/covidimpact_" + hemisphereCovidSelector.value + " hemisphere.html";
+
+    if(hemisphereCovidSelector.value !== hemisphereWeeklySelector.value) {
+      const opts = hemisphereWeeklySelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (hemisphereWeeklySelector.options[i].value === hemisphereCovidSelector.value) {
+          hemisphereWeeklySelector.options[i].selected = true;
+          hemisphereWeeklySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(hemisphereCovidSelector.value !== hemisphereTimeSeriesSelector.value) {
+      const optst = hemisphereTimeSeriesSelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (hemisphereTimeSeriesSelector.options[i].value === hemisphereCovidSelector.value) {
+          hemisphereTimeSeriesSelector.options[i].selected = true;
+          hemisphereTimeSeriesSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
+
+  hemisphereWeeklySelector.addEventListener('change',function(event) {
+    hemisphereWeeklyIframe.src = "../../assets/data/" + archiveValHemisphere + "/weekly_each_hemisphere/weekly_" + hemisphereWeeklySelector.value + " hemisphere.html";
+
+    if(hemisphereWeeklySelector.value !== hemisphereCovidSelector.value) {
+      const opts = hemisphereCovidSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (hemisphereCovidSelector.options[i].value === hemisphereWeeklySelector.value) {
+          hemisphereCovidSelector.options[i].selected = true;
+          hemisphereCovidSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(hemisphereWeeklySelector.value !== hemisphereTimeSeriesSelector.value) {
+      const optst = hemisphereTimeSeriesSelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (hemisphereTimeSeriesSelector.options[i].value === hemisphereWeeklySelector.value) {
+          hemisphereTimeSeriesSelector.options[i].selected = true;
+          hemisphereTimeSeriesSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
+
+  hemisphereTimeSeriesSelector.addEventListener('change',function(event) {
+    hemisphereTimeSeriesIframe.src = "../../assets/data/" + archiveValHemisphere + "/timeseries_each_hemisphere/timeseries_" + hemisphereTimeSeriesSelector.value + " hemisphere.html";
+
+    if(hemisphereTimeSeriesSelector.value !== hemisphereCovidSelector.value) {
+      const opts = hemisphereCovidSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (hemisphereCovidSelector.options[i].value === hemisphereTimeSeriesSelector.value) {
+          hemisphereCovidSelector.options[i].selected = true;
+          hemisphereCovidSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(hemisphereTimeSeriesSelector.value !== hemisphereWeeklySelector.value) {
+      const optst = hemisphereWeeklySelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (hemisphereWeeklySelector.options[i].value === hemisphereTimeSeriesSelector.value) {
+          hemisphereWeeklySelector.options[i].selected = true;
+          hemisphereWeeklySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
+</script>
+
+<h2 id="rsv-cases-by-region"><span class="mr-2">RSV Cases By Region</span><a href="#rsv-cases-by-region" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<div class="tabsregion">
+  <input type="radio" name="tabsregion" id="tabsregiontimeseries" checked="checked" />
+  <label for="tabsregiontimeseries">Time Series</label>
+  <div class="tab">
+    <label for="time-series-region-selector" class="sub-label">Region:</label>
+    <select id="time-series-region-selector">
+      <option value="Africa" selected="selected">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Eastern Mediterranean">Eastern Mediterranean</option>
+      <option value="Europe">Europe</option>
+      <option value="South East Asia">South East Asia</option>
+      <option value="Western Pacific">Western Pacific</option>
+    </select>
+    <iframe id="time-series-region-selected-iframe" title="" src="../../assets/data/02-02-2023/timeseries_each_region/timeseries_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+  </div>
+
+  <input type="radio" name="tabsregion" id="tabsregionweekly" />
+  <label for="tabsregionweekly">Weekly Dynamics</label>
+  <div class="tab">
+    <label for="weekly-region-selector" class="sub-label">Region:</label>
+    <select id="weekly-region-selector">
+      <option value="Africa" selected="selected">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Eastern Mediterranean">Eastern Mediterranean</option>
+      <option value="Europe">Europe</option>
+      <option value="South East Asia">South East Asia</option>
+      <option value="Western Pacific">Western Pacific</option>
+    </select>
+    <iframe id="weekly-region-selected-iframe" title="" src="../../assets/data/02-02-2023/weekly_each_region/weekly_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+  </div>
+
+  <input type="radio" name="tabsregion" id="tabsregioncovid" />
+  <label for="tabsregioncovid">Pre vs Post COVID</label>
+  <div class="tab">
+    <label for="region-selector" class="sub-label">Region:</label>
+    <select id="region-selector">
+      <option value="Africa" selected="selected">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Eastern Mediterranean">Eastern Mediterranean</option>
+      <option value="Europe">Europe</option>
+      <option value="South East Asia">South East Asia</option>
+      <option value="Western Pacific">Western Pacific</option>
+    </select>
+    <iframe id="region-selected-iframe" title="" src="../../assets/data/02-02-2023/covidimpact_each_region/covidimpact_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+  </div>
+</div>
+
+<style>
+  .tabsregion label.sub-label {
+    background: transparent;
+    display: inline;
+    color: #333;
+    padding: 0;
+  }
+  /**
+ * Tabs
+ */
+  .tabsregion {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tabsregion label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    margin-bottom:0;
+  }
+  .tabsregion .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+  }
+  .tabsregion input[type="radio"] {
+    display: none;
+  }
+  .tabsregion input[type="radio"]:checked + label {
+    background: #fff;
+    color: #333;
+  }
+  .tabsregion input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+
+  @media (max-width: 45em) {
+    .tabsregion .tab,
+    .tabsregion label {
+      order: initial;
+    }
+    .tabsregion label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+</style>
+
+<script>
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  const regionSelector = document.getElementById('region-selector');
+  const weeklyRegionSelector = document.getElementById('weekly-region-selector');
+  const timeseriesRegionSelector = document.getElementById('time-series-region-selector');
+
+  const regionIframe = document.getElementById('region-selected-iframe');
+  const weeklyRegionIframe = document.getElementById('weekly-region-selected-iframe');
+  const timeseriesRegionIframe = document.getElementById('time-series-region-selected-iframe');
+
+  let archiveValRegion = "02-02-2023";
+
+  if(getCookie("archive") !== null) {
+    archiveValRegion = getCookie("archive");
+    regionIframe.src = "../../assets/data/" + archiveValRegion + "/covidimpact_each_region/covidimpact_Africa.html";
+    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegion + "/weekly_each_region/weekly_Africa.html";
+    timeseriesRegionIframe.src = "../../assets/data/" + archiveValRegion + "/timeseries_each_region/timeseries_Africa.html";
+  }
+
+  regionSelector.addEventListener('change',function(event) {
+    regionIframe.src = "../../assets/data/" + archiveValRegion + "/covidimpact_each_region/covidimpact_" + regionSelector.value + ".html";
+
+    if(regionSelector.value !== weeklyRegionSelector.value) {
+      const opts = weeklyRegionSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (weeklyRegionSelector.options[i].value === regionSelector.value) {
+          weeklyRegionSelector.options[i].selected = true;
+          weeklyRegionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(regionSelector.value !== timeseriesRegionSelector.value) {
+      const optst = timeseriesRegionSelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (timeseriesRegionSelector.options[i].value === regionSelector.value) {
+          timeseriesRegionSelector.options[i].selected = true;
+          timeseriesRegionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
+
+  weeklyRegionSelector.addEventListener('change',function(event) {
+    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegion + "/weekly_each_region/weekly_" + weeklyRegionSelector.value + ".html";
+
+    if(weeklyRegionSelector.value !== regionSelector.value) {
+      const opts = regionSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (regionSelector.options[i].value === weeklyRegionSelector.value) {
+          regionSelector.options[i].selected = true;
+          regionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(weeklyRegionSelector.value !== timeseriesRegionSelector.value) {
+      const optst = timeseriesRegionSelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (timeseriesRegionSelector.options[i].value === weeklyRegionSelector.value) {
+          timeseriesRegionSelector.options[i].selected = true;
+          timeseriesRegionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
+
+  timeseriesRegionSelector.addEventListener('change',function(event) {
+    timeseriesRegionIframe.src = "../../assets/data/" + archiveValRegion + "/timeseries_each_region/timeseries_" + timeseriesRegionSelector.value + ".html";
+
+    if(timeseriesRegionSelector.value !== regionSelector.value) {
+      const opts = regionSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (regionSelector.options[i].value === timeseriesRegionSelector.value) {
+          regionSelector.options[i].selected = true;
+          regionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(timeseriesRegionSelector.value !== weeklyRegionSelector.value) {
+      const opts = weeklyRegionSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (weeklyRegionSelector.options[i].value === timeseriesRegionSelector.value) {
+          weeklyRegionSelector.options[i].selected = true;
+          weeklyRegionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
 </script>
 
 <h2 id="rsv-cases-by-country"><span class="mr-2">RSV Cases By Country</span><a href="#rsv-cases-by-country" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <div class="tabscountry">
-  <input type="radio" name="tabscountry" id="tabscountrycovid" checked="checked" />
-  <label for="tabscountrycovid">Covid Impact</label>
+  <input type="radio" name="tabscountry" id="tabscountrytimeseries" checked="checked" />
+  <label for="tabscountrytimeseries">Time Series</label>
   <div class="tab">
-    <select id="country-selector">
+    <label for="time-series-country-selector" class="sub-label">Country:</label>
+    <select id="time-series-country-selector">
       <option value="Argentina" selected="selected">Argentina</option>
       <option value="Australia">Australia</option>
       <option value="Belize">Belize</option>
@@ -918,12 +1160,13 @@
       <option value="Sweden">Sweden</option>
       <option value="Uruguay">Uruguay</option>
     </select>
-    <iframe id="country-selected-iframe" title="" src="../../assets/data/02-02-2023/covidimpact_each_country/covidimpact_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <iframe id="time-series-selected-iframe" title="" src="../../assets/data/02-02-2023/timeseries_each_country/timeseries_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 
   <input type="radio" name="tabscountry" id="tabscountryweekly" />
-  <label for="tabscountryweekly">Weekly</label>
+  <label for="tabscountryweekly">Weekly Dynamics</label>
   <div class="tab">
+    <label for="weekly-country-selector" class="sub-label">Country:</label>
     <select id="weekly-country-selector">
       <option value="Argentina" selected="selected">Argentina</option>
       <option value="Australia">Australia</option>
@@ -972,10 +1215,11 @@
     <iframe id="weekly-country-selected-iframe" title="" src="../../assets/data/02-02-2023/weekly_each_country/weekly_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 
-  <input type="radio" name="tabscountry" id="tabscountrytimeseries" />
-  <label for="tabscountrytimeseries">Time Series</label>
+  <input type="radio" name="tabscountry" id="tabscountrycovid" />
+  <label for="tabscountrycovid">Pre vs Post COVID</label>
   <div class="tab">
-    <select id="time-series-country-selector">
+    <label for="country-selector" class="sub-label">Country:</label>
+    <select id="country-selector">
       <option value="Argentina" selected="selected">Argentina</option>
       <option value="Australia">Australia</option>
       <option value="Belize">Belize</option>
@@ -1020,11 +1264,17 @@
       <option value="Sweden">Sweden</option>
       <option value="Uruguay">Uruguay</option>
     </select>
-    <iframe id="time-series-selected-iframe" title="" src="../../assets/data/02-02-2023/timeseries_each_country/timeseries_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <iframe id="country-selected-iframe" title="" src="../../assets/data/02-02-2023/covidimpact_each_country/covidimpact_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 </div>
 
 <style>
+  .tabscountry label.sub-label {
+    background: transparent;
+    display: inline;
+    color: #333;
+    padding: 0;
+  }
   /**
  * Tabs
  */
@@ -1079,71 +1329,97 @@
 
 <script>
   const countrySelector = document.getElementById('country-selector');
+  const weeklyCountrySelector = document.getElementById('weekly-country-selector');
+  const timeSeriesCountrySelector = document.getElementById('time-series-country-selector');
   const countryIframe = document.getElementById('country-selected-iframe');
+  const weeklyCountryIframe = document.getElementById('weekly-country-selected-iframe');
+  const timeSeriesCountryIframe = document.getElementById('time-series-selected-iframe');
 
   let archiveVal = "02-02-2023";
 
   if(getCookie("archive") !== null) {
     archiveVal = getCookie("archive");
     countryIframe.src = "../../assets/data/" + archiveVal + "/covidimpact_each_country/covidimpact_Argentina.html";
+    weeklyCountryIframe.src = "../../assets/data/" + archiveVal + "/weekly_each_country/weekly_Argentina.html";
+    timeSeriesCountryIframe.src = "../../assets/data/" + archiveVal + "/timeseries_each_country/timeseries_Argentina.html";
   }
 
   countrySelector.addEventListener('change',function(event) {
     countryIframe.src = "../../assets/data/" + archiveVal + "/covidimpact_each_country/covidimpact_" + countrySelector.value + ".html";
-  })
 
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    if(weeklyCountrySelector.value !== countrySelector.value) {
+      const opts = weeklyCountrySelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (weeklyCountrySelector.options[i].value === countrySelector.value) {
+          weeklyCountrySelector.options[i].selected = true;
+          weeklyCountrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
     }
-    return null;
-  }
-</script>
 
-<script>
-  const weeklyCountrySelector = document.getElementById('weekly-country-selector');
-  const weeklyCountryIframe = document.getElementById('weekly-country-selected-iframe');
-
-  let weeklyCountryArchiveVal = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    weeklyCountryArchiveVal = getCookie("archive");
-    weeklyCountryIframe.src = "../../assets/data/" + weeklyCountryArchiveVal + "/weekly_each_country/weekly_Argentina.html";
-  }
+    if(timeSeriesCountrySelector.value !== countrySelector.value) {
+      const optst = timeSeriesCountrySelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (timeSeriesCountrySelector.options[i].value === countrySelector.value) {
+          timeSeriesCountrySelector.options[i].selected = true;
+          timeSeriesCountrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  })
 
   weeklyCountrySelector.addEventListener('change',function(event) {
-    weeklyCountryIframe.src = "../../assets/data/" + weeklyCountryArchiveVal + "/weekly_each_country/weekly_" + weeklyCountrySelector.value + ".html";
-  })
+    weeklyCountryIframe.src = "../../assets/data/" + archiveVal + "/weekly_each_country/weekly_" + weeklyCountrySelector.value + ".html";
 
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    if(countrySelector.value !== weeklyCountrySelector.value) {
+      const opts = countrySelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (countrySelector.options[i].value === weeklyCountrySelector.value) {
+          countrySelector.options[i].selected = true;
+          countrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
     }
-    return null;
-  }
-</script>
 
-<script>
-  const timeSeriesCountrySelector = document.getElementById('time-series-country-selector');
-  const timeSeriesCountryIframe = document.getElementById('time-series-selected-iframe');
-
-  let timeSeriesCountryArchiveVal = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    timeSeriesCountryArchiveVal = getCookie("archive");
-    timeSeriesCountryIframe.src = "../../assets/data/" + timeSeriesCountryArchiveVal + "/timeseries_each_country/timeseries_Argentina.html";
-  }
+    if(timeSeriesCountrySelector.value !== weeklyCountrySelector.value) {
+      const optst = timeSeriesCountrySelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (timeSeriesCountrySelector.options[i].value === weeklyCountrySelector.value) {
+          timeSeriesCountrySelector.options[i].selected = true;
+          timeSeriesCountrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  })
 
   timeSeriesCountrySelector.addEventListener('change',function(event) {
-    timeSeriesCountryIframe.src = "../../assets/data/" + timeSeriesCountryArchiveVal + "/timeseries_each_country/timeseries_" + timeSeriesCountrySelector.value + ".html";
+    timeSeriesCountryIframe.src = "../../assets/data/" + archiveVal + "/timeseries_each_country/timeseries_" + timeSeriesCountrySelector.value + ".html";
+
+    if(countrySelector.value !== timeSeriesCountrySelector.value) {
+      const opts = countrySelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (countrySelector.options[i].value === timeSeriesCountrySelector.value) {
+          countrySelector.options[i].selected = true;
+          countrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(weeklyCountrySelector.value !== timeSeriesCountrySelector.value) {
+      const optst = weeklyCountrySelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (weeklyCountrySelector.options[i].value === timeSeriesCountrySelector.value) {
+          weeklyCountrySelector.options[i].selected = true;
+          weeklyCountrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
   })
 
   function getCookie(name) {
@@ -1158,207 +1434,84 @@
   }
 </script>
 
-<h2 id="rsv-cases-by-region"><span class="mr-2">RSV Cases By Region</span><a href="#rsv-cases-by-region" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<div class="tabsregion">
-  <input type="radio" name="tabsregion" id="tabsregioncovid" checked="checked" />
-  <label for="tabsregioncovid">Covid Impact</label>
-  <div class="tab">
-    <select id="region-selector">
-      <option value="Africa" selected="selected">Africa</option>
-      <option value="Americas">Americas</option>
-      <option value="Eastern Mediterranean">Eastern Mediterranean</option>
-      <option value="Europe">Europe</option>
-      <option value="South East Asia">South East Asia</option>
-      <option value="Western Pacific">Western Pacific</option>
-    </select>
-    <iframe id="region-selected-iframe" title="" src="../../assets/data/02-02-2023/covidimpact_each_region/covidimpact_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
-  </div>
-
-  <input type="radio" name="tabsregion" id="tabsregionweekly" />
-  <label for="tabsregionweekly">Weekly</label>
-  <div class="tab">
-    <select id="weekly-region-selector">
-      <option value="Africa" selected="selected">Africa</option>
-      <option value="Americas">Americas</option>
-      <option value="Eastern Mediterranean">Eastern Mediterranean</option>
-      <option value="Europe">Europe</option>
-      <option value="South East Asia">South East Asia</option>
-      <option value="Western Pacific">Western Pacific</option>
-    </select>
-    <iframe id="weekly-region-selected-iframe" title="" src="../../assets/data/02-02-2023/weekly_each_region/weekly_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
-  </div>
-
-  <input type="radio" name="tabsregion" id="tabsregiontimeseries" />
-  <label for="tabsregiontimeseries">Time Series</label>
-  <div class="tab">
-    <select id="time-series-region-selector">
-      <option value="Africa" selected="selected">Africa</option>
-      <option value="Americas">Americas</option>
-      <option value="Eastern Mediterranean">Eastern Mediterranean</option>
-      <option value="Europe">Europe</option>
-      <option value="South East Asia">South East Asia</option>
-      <option value="Western Pacific">Western Pacific</option>
-    </select>
-    <iframe id="time-series-region-selected-iframe" title="" src="../../assets/data/02-02-2023/timeseries_each_region/timeseries_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
-  </div>
-</div>
-
-<style>
-  /**
- * Tabs
- */
-  .tabsregion {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .tabsregion label {
-    order: 1;
-    display: block;
-    padding: 1rem 2rem;
-    margin-right: 0.2rem;
-    cursor: pointer;
-    background: #333;
-    color: #fff;
-    font-weight: bold;
-    transition: background ease 0.2s;
-    margin-bottom:0;
-  }
-  .tabsregion .tab {
-    order: 99;
-    flex-grow: 1;
-    width: 100%;
-    display: none;
-    padding: 1rem;
-    background: #fff;
-  }
-  .tabsregion input[type="radio"] {
-    display: none;
-  }
-  .tabsregion input[type="radio"]:checked + label {
-    background: #fff;
-    color: #333;
-  }
-  .tabsregion input[type="radio"]:checked + label + .tab {
-    display: block;
-  }
-
-  @media (max-width: 45em) {
-    .tabsregion .tab,
-    .tabsregion label {
-      order: initial;
-    }
-    .tabsregion label {
-      width: 100%;
-      margin-right: 0;
-      margin-top: 0.2rem;
-    }
-  }
-
-</style>
-
-<script>
-  const regionSelector = document.getElementById('region-selector');
-  const regionIframe = document.getElementById('region-selected-iframe');
-
-  let archiveValRegion = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    archiveValRegion = getCookie("archive");
-    regionIframe.src = "../../assets/data/" + archiveValRegion + "/covidimpact_each_region/covidimpact_Africa.html";
-  }
-
-  regionSelector.addEventListener('change',function(event) {
-    regionIframe.src = "../../assets/data/" + archiveValRegion + "/covidimpact_each_region/covidimpact_" + regionSelector.value + ".html";
-  })
-
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-  }
-</script>
-
-<script>
-  const weeklyRegionSelector = document.getElementById('weekly-region-selector');
-  const weeklyRegionIframe = document.getElementById('weekly-region-selected-iframe');
-
-  let archiveValRegionWeekly = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    archiveValRegionWeekly = getCookie("archive");
-    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegionWeekly + "/weekly_each_region/weekly_Africa.html";
-  }
-
-  weeklyRegionSelector.addEventListener('change',function(event) {
-    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegionWeekly + "/weekly_each_region/weekly_" + weeklyRegionSelector.value + ".html";
-  })
-
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-  }
-</script>
-
-<script>
-  const timeseriesRegionSelector = document.getElementById('time-series-region-selector');
-  const timeseriesRegionIframe = document.getElementById('time-series-region-selected-iframe');
-
-  let archiveValRegionTimeSeries = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    archiveValRegionTimeSeries = getCookie("archive");
-    timeseriesRegionIframe.src = "../../assets/data/" + archiveValRegionTimeSeries + "/timeseries_each_region/timeseries_Africa.html";
-  }
-
-  timeseriesRegionSelector.addEventListener('change',function(event) {
-    timeseriesRegionIframe.src = "../../assets/data/" + archiveValRegionTimeSeries + "/timeseries_each_region/timeseries_" + timeseriesRegionSelector.value + ".html";
-  })
-
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-  }
-</script>
-
-<h2 id="rsv-onset-by-location-in-the-united-states"><span class="mr-2">RSV onset by location in the United States</span><a href="#rsv-onset-by-location-in-the-united-states" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="rsv-onset"><span class="mr-2">RSV Onset</span><a href="#rsv-onset" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <div class="tabsscatter">
-  <input type="radio" name="tabsscatter" id="tabsscatter2021" checked="checked" />
-  <label for="tabsscatter2021">2021</label>
+  <input type="radio" name="tabsscatter" id="tabsscatterhemisphere" checked="checked" />
+  <label for="tabsscatterhemisphere">Hemisphere</label>
   <div class="tab">
-    <iframe id="scatter-selected-iframe-2021" title="" src="../../assets/data/02-02-2023/onset_each_region/onsetscatter2021_USA.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <label for="onset-hemisphere-year" class="sub-label">Year:</label>
+    <select id="onset-hemisphere-year">
+      <option value="preCovid_vs_2021_22" selected="selected">Pre Covid Vs 2021-2022</option>
+      <option value="preCovid_vs_2022_23">Pre Covid Vs 2022-2023</option>
+    </select>
+    <br />
+    <label for="onset-hemisphere-selector" class="sub-label">Hemisphere:</label>
+    <select id="onset-hemisphere-selector">
+      <option value="Northern" selected="selected">Northern</option>
+      <option value="Southern">Southern</option>
+    </select>
+    <iframe id="scatter-selected-iframe-hemisphere" title="" src="../../assets/data/02-02-2023/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 
-  <input type="radio" name="tabsscatter" id="tabsscatter2022" />
-  <label for="tabsscatter2022">2022</label>
+  <input type="radio" name="tabsscatter" id="tabsscatterregion" />
+  <label for="tabsscatterregion">Region</label>
   <div class="tab">
-    <iframe id="scatter-selected-iframe-2022" title="" src="../../assets/data/02-02-2023/onset_each_region/onsetscatter2022_USA.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <label for="onset-region-year" class="sub-label">Year:</label>
+    <select id="onset-region-year">
+      <option value="preCovid_vs_2021_22" selected="selected">Pre Covid Vs 2021-2022</option>
+      <option value="preCovid_vs_2022_23">Pre Covid Vs 2022-2023</option>
+    </select>
+    <br />
+    <label for="onset-region-selector" class="sub-label">Region:</label>
+    <select id="onset-region-selector">
+      <option value="Africa" selected="selected">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Eastern Mediterranean">Eastern Mediterranean</option>
+      <option value="Europe">Europe</option>
+      <option value="South East Asia">South East Asia</option>
+      <option value="Western Pacific">Western Pacific</option>
+    </select>
+    <iframe id="scatter-selected-iframe-region" title="" src="../../assets/data/02-02-2023/onset_each_region/Africa_region_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 
-  <input type="radio" name="tabsscatter" id="tabsscatterall" />
-  <label for="tabsscatterall">All</label>
+  <input type="radio" name="tabsscatter" id="tabsscatterclimatezones" />
+  <label for="tabsscatterclimatezones">Climate Zones</label>
   <div class="tab">
-    <iframe id="scatter-selected-iframe-all" title="" src="../../assets/data/02-02-2023/onset_each_region/onsetscatterall_USA.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <label for="onset-climate-zone-year" class="sub-label">Year:</label>
+    <select id="onset-climate-zone-year">
+      <option value="preCovid_vs_2021_22" selected="selected">Pre Covid Vs 2021-2022</option>
+      <option value="preCovid_vs_2022_23">Pre Covid Vs 2022-2023</option>
+    </select>
+    <br />
+    <label for="onset-climate-zone-selector" class="sub-label">Climate Zone:</label>
+    <select id="onset-climate-zone-selector">
+      <option value="Temperate" selected="selected">Temperate</option>
+      <option value="Sub-tropical">Subtropical</option>
+      <option value="Tropical">Tropical</option>
+    </select>
+    <iframe id="scatter-selected-iframe-climate-zones" title="" src="../../assets/data/02-02-2023/onset_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+  </div>
+
+  <input type="radio" name="tabsscatter" id="tabsscatterusregion" />
+  <label for="tabsscatterusregion">US Regions</label>
+  <div class="tab">
+    <label for="onset-us-regions-year" class="sub-label">Year:</label>
+    <select id="onset-us-regions-year">
+      <option value="preCovid_vs_2021_22" selected="selected">Pre Covid Vs 2021-2022</option>
+      <option value="preCovid_vs_2022_23">Pre Covid Vs 2022-2023</option>
+    </select>
+    <iframe id="scatter-selected-iframe-us-region" title="" src="../../assets/data/02-02-2023/onset_each_USregion/United States_USregion_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 </div>
 
 <style>
+
+  .tabsscatter label.sub-label {
+    background: transparent;
+    display: inline;
+    color: #333;
+    padding: 0;
+  }
   /**
  * Tabs
  */
@@ -1423,11 +1576,55 @@
     return null;
   }
 
+  const hemisphereIFrame = document.getElementById('scatter-selected-iframe-hemisphere');
+  const regionIFrame = document.getElementById('scatter-selected-iframe-region');
+  const climateZonesIFrame = document.getElementById('scatter-selected-iframe-climate-zones');
+  const usRegionsIFrame = document.getElementById('scatter-selected-iframe-us-region');
+
+  const onsetHemisphereSelector = document.getElementById('onset-hemisphere-selector');
+  const onsetRegionSelector = document.getElementById('onset-region-selector');
+  const onsetClimateZoneSelector = document.getElementById('onset-climate-zone-selector');
+
+  const hemisphereYearSelector = document.getElementById('onset-hemisphere-year');
+  const regionYearSelector = document.getElementById('onset-region-year');
+  const climateZonesYearSelector = document.getElementById('onset-climate-zone-year');
+  const usRegionsYearSelector = document.getElementById('onset-us-regions-year');
+
   if(getCookie("archive") !== null) {
-    document.getElementById("scatter-selected-iframe-2021").src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/onsetscatter2021_USA.html"
-    document.getElementById("scatter-selected-iframe-2022").src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/onsetscatter2022_USA.html"
-    document.getElementById("scatter-selected-iframe-all").src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/onsetscatterall_USA.html"
+    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html"
+    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/Africa_region_preCovid_vs_2021_22.html"
+    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html"
+    usRegionsIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_USregion/United States_USregion_preCovid_vs_2021_22.html"
   }
+
+  hemisphereYearSelector.addEventListener('change',function(event) {
+    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/" + onsetHemisphereSelector.value + " hemisphere_" + hemisphereYearSelector.value + ".html";
+  });
+
+  onsetHemisphereSelector.addEventListener('change',function(event) {
+    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/" + onsetHemisphereSelector.value + " hemisphere_" + hemisphereYearSelector.value + ".html";
+  });
+
+  regionYearSelector.addEventListener('change',function(event) {
+    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/" + onsetRegionSelector.value + "_region_" + regionYearSelector.value + ".html";
+  });
+
+  onsetRegionSelector.addEventListener('change',function(event) {
+    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/" + onsetRegionSelector.value + "_region_" + regionYearSelector.value + ".html";
+  });
+
+  climateZonesYearSelector.addEventListener('change',function(event) {
+    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/" + onsetClimateZoneSelector.value + "_climazone_" + climateZonesYearSelector.value + ".html";
+  });
+
+  onsetClimateZoneSelector.addEventListener('change',function(event) {
+    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/" + onsetClimateZoneSelector.value + "_climazone_" + climateZonesYearSelector.value + ".html";
+  });
+
+  usRegionsYearSelector.addEventListener('change',function(event) {
+    usRegionsIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_USregion/United States_USregion_" + usRegionsYearSelector.value + ".html";
+  });
+
 </script>
 
 
@@ -1477,19 +1674,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Understanding the patterns of global re-emergence of RSV following COVID19 pandemic - RSV Global&url=https%3A%2F%2Frsvglobalreport.github.io%2Fdashboard%2Fposts%2Fdashboard%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Understanding the patterns of global re-emergence of RSV following COVID19 pandemic - RSV Global&url=http%3A%2F%2Flocalhost%3A4000%2Fdashboard%2Fposts%2Fdashboard%2F" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Understanding the patterns of global re-emergence of RSV following COVID19 pandemic - RSV Global&u=https%3A%2F%2Frsvglobalreport.github.io%2Fdashboard%2Fposts%2Fdashboard%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Understanding the patterns of global re-emergence of RSV following COVID19 pandemic - RSV Global&u=http%3A%2F%2Flocalhost%3A4000%2Fdashboard%2Fposts%2Fdashboard%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=https%3A%2F%2Frsvglobalreport.github.io%2Fdashboard%2Fposts%2Fdashboard%2F&text=Understanding the patterns of global re-emergence of RSV following COVID19 pandemic - RSV Global" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fdashboard%2Fposts%2Fdashboard%2F&text=Understanding the patterns of global re-emergence of RSV following COVID19 pandemic - RSV Global" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>

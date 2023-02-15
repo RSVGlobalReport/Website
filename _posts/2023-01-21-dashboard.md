@@ -14,11 +14,11 @@ mermaid: true
 ## RSV Cases By Hemisphere
 {% include each_hemisphere.html %}
 
-## RSV Cases By Country
-{% include each_country.html %}
-
 ## RSV Cases By Region
 {% include each_region.html %}
 
-## RSV onset by location in the United States
-{% include onset_scatter.html %}
+## RSV Cases By Country
+{% include each_country.html %}
+
+## RSV Onset
+{% include each_onset_scatter.html %}

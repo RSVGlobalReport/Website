@@ -80,10 +80,10 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: 'http://localhost:4000'
+img_cdn: 'https://rsvglobalreport.github.io/dashboard'
 
 # the avatar on sidebar, support local or CORS resources
-avatar: '/assets/img/logo.jpg'
+avatar: '/assets/img/logo.png'
 
 # boolean type, the global switch for ToC in posts.
 toc: true

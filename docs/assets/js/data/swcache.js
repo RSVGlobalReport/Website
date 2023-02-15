@@ -40,10 +40,10 @@ const resource = [
 const allowedDomains = [
     
 
-    'rsvglobalreport.github.io',
+    'localhost:4000',
 
     
-        'localhost:4000',
+        'rsvglobalreport.github.io',
     
 
     'fonts.gstatic.com',
