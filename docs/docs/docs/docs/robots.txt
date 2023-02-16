@@ -1,5 +1,0 @@
-User-agent: *
-
-Disallow: /norobots/
-
-Sitemap: https://rsvglobalreport.github.io//Website/sitemap.xml
