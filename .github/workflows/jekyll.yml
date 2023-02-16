@@ -59,12 +59,6 @@ jobs:
         with:
           path: "docs"
 
-  deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
