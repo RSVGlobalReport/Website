@@ -1,8 +1,9 @@
 <div class="tabsregion">
-  <input type="radio" name="tabsregion" id="tabsregioncovid" checked="checked">
-  <label for="tabsregioncovid">Covid Impact</label>
+  <input type="radio" name="tabsregion" id="tabsregiontimeseries" checked="checked">
+  <label for="tabsregiontimeseries">Time Series</label>
   <div class="tab">
-    <select id="region-selector">
+    <label for="time-series-region-selector" class="sub-label">Region:</label>
+    <select id="time-series-region-selector">
       <option value="Africa" selected="selected">Africa</option>
       <option value="Americas" >Americas</option>
       <option value="Eastern Mediterranean" >Eastern Mediterranean</option>
@@ -11,9 +12,9 @@
       <option value="Western Pacific" >Western Pacific</option>
     </select>
     <iframe
-      id="region-selected-iframe"
+      id="time-series-region-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/covidimpact_each_region/covidimpact_Africa.html"
+      src="../../assets/data/02-02-2023/timeseries_each_region/timeseries_Africa.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -22,8 +23,9 @@
   </div>
 
   <input type="radio" name="tabsregion" id="tabsregionweekly">
-  <label for="tabsregionweekly">Weekly</label>
+  <label for="tabsregionweekly">Weekly Dynamics</label>
   <div class="tab">
+    <label for="weekly-region-selector" class="sub-label">Region:</label>
     <select id="weekly-region-selector">
       <option value="Africa" selected="selected">Africa</option>
       <option value="Americas" >Americas</option>
@@ -43,10 +45,11 @@
     ></iframe>
   </div>
 
-  <input type="radio" name="tabsregion" id="tabsregiontimeseries">
-  <label for="tabsregiontimeseries">Time Series</label>
+  <input type="radio" name="tabsregion" id="tabsregioncovid">
+  <label for="tabsregioncovid">Pre vs Post COVID</label>
   <div class="tab">
-    <select id="time-series-region-selector">
+    <label for="region-selector" class="sub-label">Region:</label>
+    <select id="region-selector">
       <option value="Africa" selected="selected">Africa</option>
       <option value="Americas" >Americas</option>
       <option value="Eastern Mediterranean" >Eastern Mediterranean</option>
@@ -55,9 +58,9 @@
       <option value="Western Pacific" >Western Pacific</option>
     </select>
     <iframe
-      id="time-series-region-selected-iframe"
+      id="region-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/timeseries_each_region/timeseries_Africa.html"
+      src="../../assets/data/02-02-2023/covidimpact_each_region/covidimpact_Africa.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -67,6 +70,12 @@
 </div>
 
 <style>
+  .tabsregion label.sub-label {
+    background: transparent;
+    display: inline;
+    color: #333;
+    padding: 0;
+  }
   /**
  * Tabs
  */
@@ -120,82 +129,109 @@
 </style>
 
 <script>
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
   const regionSelector = document.getElementById('region-selector');
+  const weeklyRegionSelector = document.getElementById('weekly-region-selector');
+  const timeseriesRegionSelector = document.getElementById('time-series-region-selector');
+
   const regionIframe = document.getElementById('region-selected-iframe');
+  const weeklyRegionIframe = document.getElementById('weekly-region-selected-iframe');
+  const timeseriesRegionIframe = document.getElementById('time-series-region-selected-iframe');
 
   let archiveValRegion = "02-02-2023";
 
   if(getCookie("archive") !== null) {
     archiveValRegion = getCookie("archive");
     regionIframe.src = "../../assets/data/" + archiveValRegion + "/covidimpact_each_region/covidimpact_Africa.html";
+    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegion + "/weekly_each_region/weekly_Africa.html";
+    timeseriesRegionIframe.src = "../../assets/data/" + archiveValRegion + "/timeseries_each_region/timeseries_Africa.html";
   }
 
   regionSelector.addEventListener('change',function(event) {
     regionIframe.src = "../../assets/data/" + archiveValRegion + "/covidimpact_each_region/covidimpact_" + regionSelector.value + ".html";
-  })
 
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    if(regionSelector.value !== weeklyRegionSelector.value) {
+      const opts = weeklyRegionSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (weeklyRegionSelector.options[i].value === regionSelector.value) {
+          weeklyRegionSelector.options[i].selected = true;
+          weeklyRegionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
     }
-    return null;
-  }
-</script>
 
-<script>
-  const weeklyRegionSelector = document.getElementById('weekly-region-selector');
-  const weeklyRegionIframe = document.getElementById('weekly-region-selected-iframe');
-
-  let archiveValRegionWeekly = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    archiveValRegionWeekly = getCookie("archive");
-    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegionWeekly + "/weekly_each_region/weekly_Africa.html";
-  }
+    if(regionSelector.value !== timeseriesRegionSelector.value) {
+      const optst = timeseriesRegionSelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (timeseriesRegionSelector.options[i].value === regionSelector.value) {
+          timeseriesRegionSelector.options[i].selected = true;
+          timeseriesRegionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
 
   weeklyRegionSelector.addEventListener('change',function(event) {
-    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegionWeekly + "/weekly_each_region/weekly_" + weeklyRegionSelector.value + ".html";
-  })
+    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegion + "/weekly_each_region/weekly_" + weeklyRegionSelector.value + ".html";
 
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    if(weeklyRegionSelector.value !== regionSelector.value) {
+      const opts = regionSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (regionSelector.options[i].value === weeklyRegionSelector.value) {
+          regionSelector.options[i].selected = true;
+          regionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
     }
-    return null;
-  }
-</script>
 
-<script>
-  const timeseriesRegionSelector = document.getElementById('time-series-region-selector');
-  const timeseriesRegionIframe = document.getElementById('time-series-region-selected-iframe');
-
-  let archiveValRegionTimeSeries = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    archiveValRegionTimeSeries = getCookie("archive");
-    timeseriesRegionIframe.src = "../../assets/data/" + archiveValRegionTimeSeries + "/timeseries_each_region/timeseries_Africa.html";
-  }
+    if(weeklyRegionSelector.value !== timeseriesRegionSelector.value) {
+      const optst = timeseriesRegionSelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (timeseriesRegionSelector.options[i].value === weeklyRegionSelector.value) {
+          timeseriesRegionSelector.options[i].selected = true;
+          timeseriesRegionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
 
   timeseriesRegionSelector.addEventListener('change',function(event) {
-    timeseriesRegionIframe.src = "../../assets/data/" + archiveValRegionTimeSeries + "/timeseries_each_region/timeseries_" + timeseriesRegionSelector.value + ".html";
-  })
+    timeseriesRegionIframe.src = "../../assets/data/" + archiveValRegion + "/timeseries_each_region/timeseries_" + timeseriesRegionSelector.value + ".html";
 
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    if(timeseriesRegionSelector.value !== regionSelector.value) {
+      const opts = regionSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (regionSelector.options[i].value === timeseriesRegionSelector.value) {
+          regionSelector.options[i].selected = true;
+          regionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
     }
-    return null;
-  }
+
+    if(timeseriesRegionSelector.value !== weeklyRegionSelector.value) {
+      const opts = weeklyRegionSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (weeklyRegionSelector.options[i].value === timeseriesRegionSelector.value) {
+          weeklyRegionSelector.options[i].selected = true;
+          weeklyRegionSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
 </script>

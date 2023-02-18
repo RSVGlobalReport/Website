@@ -1,8 +1,9 @@
 <div class="tabscountry">
-  <input type="radio" name="tabscountry" id="tabscountrycovid" checked="checked">
-  <label for="tabscountrycovid">Covid Impact</label>
+  <input type="radio" name="tabscountry" id="tabscountrytimeseries" checked="checked">
+  <label for="tabscountrytimeseries">Time Series</label>
   <div class="tab">
-    <select id="country-selector">
+    <label for="time-series-country-selector" class="sub-label">Country:</label>
+    <select id="time-series-country-selector">
       <option value="Argentina" selected="selected">Argentina</option>
       <option value="Australia" >Australia</option>
       <option value="Belize" >Belize</option>
@@ -48,9 +49,9 @@
       <option value="Uruguay" >Uruguay</option>
     </select>
     <iframe
-      id="country-selected-iframe"
+      id="time-series-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/covidimpact_each_country/covidimpact_Argentina.html"
+      src="../../assets/data/02-02-2023/timeseries_each_country/timeseries_Argentina.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -59,8 +60,9 @@
   </div>
 
   <input type="radio" name="tabscountry" id="tabscountryweekly">
-  <label for="tabscountryweekly">Weekly</label>
+  <label for="tabscountryweekly">Weekly Dynamics</label>
   <div class="tab">
+    <label for="weekly-country-selector" class="sub-label">Country:</label>
     <select id="weekly-country-selector">
       <option value="Argentina" selected="selected">Argentina</option>
       <option value="Australia" >Australia</option>
@@ -117,10 +119,11 @@
     ></iframe>
   </div>
 
-  <input type="radio" name="tabscountry" id="tabscountrytimeseries">
-  <label for="tabscountrytimeseries">Time Series</label>
+  <input type="radio" name="tabscountry" id="tabscountrycovid">
+  <label for="tabscountrycovid">Pre vs Post COVID</label>
   <div class="tab">
-    <select id="time-series-country-selector">
+    <label for="country-selector" class="sub-label">Country:</label>
+    <select id="country-selector">
       <option value="Argentina" selected="selected">Argentina</option>
       <option value="Australia" >Australia</option>
       <option value="Belize" >Belize</option>
@@ -166,9 +169,9 @@
       <option value="Uruguay" >Uruguay</option>
     </select>
     <iframe
-      id="time-series-selected-iframe"
+      id="country-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/timeseries_each_country/timeseries_Argentina.html"
+      src="../../assets/data/02-02-2023/covidimpact_each_country/covidimpact_Argentina.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -178,6 +181,12 @@
 </div>
 
 <style>
+  .tabscountry label.sub-label {
+    background: transparent;
+    display: inline;
+    color: #333;
+    padding: 0;
+  }
   /**
  * Tabs
  */
@@ -232,71 +241,97 @@
 
 <script>
   const countrySelector = document.getElementById('country-selector');
+  const weeklyCountrySelector = document.getElementById('weekly-country-selector');
+  const timeSeriesCountrySelector = document.getElementById('time-series-country-selector');
   const countryIframe = document.getElementById('country-selected-iframe');
+  const weeklyCountryIframe = document.getElementById('weekly-country-selected-iframe');
+  const timeSeriesCountryIframe = document.getElementById('time-series-selected-iframe');
 
   let archiveVal = "02-02-2023";
 
   if(getCookie("archive") !== null) {
     archiveVal = getCookie("archive");
     countryIframe.src = "../../assets/data/" + archiveVal + "/covidimpact_each_country/covidimpact_Argentina.html";
+    weeklyCountryIframe.src = "../../assets/data/" + archiveVal + "/weekly_each_country/weekly_Argentina.html";
+    timeSeriesCountryIframe.src = "../../assets/data/" + archiveVal + "/timeseries_each_country/timeseries_Argentina.html";
   }
 
   countrySelector.addEventListener('change',function(event) {
     countryIframe.src = "../../assets/data/" + archiveVal + "/covidimpact_each_country/covidimpact_" + countrySelector.value + ".html";
-  })
 
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    if(weeklyCountrySelector.value !== countrySelector.value) {
+      const opts = weeklyCountrySelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (weeklyCountrySelector.options[i].value === countrySelector.value) {
+          weeklyCountrySelector.options[i].selected = true;
+          weeklyCountrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
     }
-    return null;
-  }
-</script>
 
-<script>
-  const weeklyCountrySelector = document.getElementById('weekly-country-selector');
-  const weeklyCountryIframe = document.getElementById('weekly-country-selected-iframe');
-
-  let weeklyCountryArchiveVal = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    weeklyCountryArchiveVal = getCookie("archive");
-    weeklyCountryIframe.src = "../../assets/data/" + weeklyCountryArchiveVal + "/weekly_each_country/weekly_Argentina.html";
-  }
+    if(timeSeriesCountrySelector.value !== countrySelector.value) {
+      const optst = timeSeriesCountrySelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (timeSeriesCountrySelector.options[i].value === countrySelector.value) {
+          timeSeriesCountrySelector.options[i].selected = true;
+          timeSeriesCountrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  })
 
   weeklyCountrySelector.addEventListener('change',function(event) {
-    weeklyCountryIframe.src = "../../assets/data/" + weeklyCountryArchiveVal + "/weekly_each_country/weekly_" + weeklyCountrySelector.value + ".html";
+    weeklyCountryIframe.src = "../../assets/data/" + archiveVal + "/weekly_each_country/weekly_" + weeklyCountrySelector.value + ".html";
+
+    if(countrySelector.value !== weeklyCountrySelector.value) {
+      const opts = countrySelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (countrySelector.options[i].value === weeklyCountrySelector.value) {
+          countrySelector.options[i].selected = true;
+          countrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(timeSeriesCountrySelector.value !== weeklyCountrySelector.value) {
+      const optst = timeSeriesCountrySelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (timeSeriesCountrySelector.options[i].value === weeklyCountrySelector.value) {
+          timeSeriesCountrySelector.options[i].selected = true;
+          timeSeriesCountrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
   })
 
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1,c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-  }
-</script>
-
-<script>
-  const timeSeriesCountrySelector = document.getElementById('time-series-country-selector');
-  const timeSeriesCountryIframe = document.getElementById('time-series-selected-iframe');
-
-  let timeSeriesCountryArchiveVal = "02-02-2023";
-
-  if(getCookie("archive") !== null) {
-    timeSeriesCountryArchiveVal = getCookie("archive");
-    timeSeriesCountryIframe.src = "../../assets/data/" + timeSeriesCountryArchiveVal + "/timeseries_each_country/timeseries_Argentina.html";
-  }
-
   timeSeriesCountrySelector.addEventListener('change',function(event) {
-    timeSeriesCountryIframe.src = "../../assets/data/" + timeSeriesCountryArchiveVal + "/timeseries_each_country/timeseries_" + timeSeriesCountrySelector.value + ".html";
+    timeSeriesCountryIframe.src = "../../assets/data/" + archiveVal + "/timeseries_each_country/timeseries_" + timeSeriesCountrySelector.value + ".html";
+
+    if(countrySelector.value !== timeSeriesCountrySelector.value) {
+      const opts = countrySelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (countrySelector.options[i].value === timeSeriesCountrySelector.value) {
+          countrySelector.options[i].selected = true;
+          countrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(weeklyCountrySelector.value !== timeSeriesCountrySelector.value) {
+      const optst = weeklyCountrySelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (weeklyCountrySelector.options[i].value === timeSeriesCountrySelector.value) {
+          weeklyCountrySelector.options[i].selected = true;
+          weeklyCountrySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
   })
 
   function getCookie(name) {

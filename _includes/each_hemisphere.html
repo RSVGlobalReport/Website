@@ -1,15 +1,17 @@
-<div class="tabs">
-  <input type="radio" name="tabs" id="tabone" checked="checked">
-  <label for="tabone">Northern Hemisphere</label>
-  <div class="tab">
+<div class="tab">
     <div class="tabsnorthern">
-      <input type="radio" name="tabsnorthern" id="tabsnortherncovid" checked="checked">
-      <label for="tabsnortherncovid">Covid Impact</label>
+      <input type="radio" name="tabsnorthern" id="tabsnorthernyearly" checked="checked">
+      <label for="tabsnorthernyearly">Time Series</label>
       <div class="tab">
+        <label for="hemisphere-time-series-selector" class="sub-label">Hemisphere:</label>
+        <select id="hemisphere-time-series-selector">
+          <option value="Northern" selected="selected">Northern</option>
+          <option value="Southern" >Southern</option>
+        </select>
         <iframe
-          id="northernhemisphere"
+          id="northernhemispheretimeseries"
           title=""
-          src="../../assets/data/02-02-2023/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
+          src="../../assets/data/02-02-2023/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
           frameborder="0"
           width="100%"
           height="600"
@@ -18,8 +20,13 @@
       </div>
 
       <input type="radio" name="tabsnorthern" id="tabsnorthernweekly">
-      <label for="tabsnorthernweekly">Weekly</label>
+      <label for="tabsnorthernweekly">Weekly Dynamics</label>
       <div class="tab">
+        <label for="hemisphere-weekly-selector" class="sub-label">Hemisphere:</label>
+        <select id="hemisphere-weekly-selector">
+          <option value="Northern" selected="selected">Northern</option>
+          <option value="Southern" >Southern</option>
+        </select>
         <iframe
           id="northernhemisphereweekly"
           title=""
@@ -31,131 +38,35 @@
         ></iframe>
       </div>
 
-      <input type="radio" name="tabsnorthern" id="tabsnorthernyearly">
-      <label for="tabsnorthernyearly">Time Series</label>
+      <input type="radio" name="tabsnorthern" id="tabsnortherncovid">
+      <label for="tabsnortherncovid">Pre vs Post COVID</label>
       <div class="tab">
+        <label for="hemisphere-covid-selector" class="sub-label">Hemisphere:</label>
+        <select id="hemisphere-covid-selector">
+          <option value="Northern" selected="selected">Northern</option>
+          <option value="Southern" >Southern</option>
+        </select>
         <iframe
-          id="northernhemispheretimeseries"
+          id="northernhemisphere"
           title=""
-          src="../../assets/data/02-02-2023/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
+          src="../../assets/data/02-02-2023/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
           frameborder="0"
           width="100%"
           height="600"
           allowtransparency
         ></iframe>
       </div>
+
     </div>
-
-    <!-- Secondary Tab System End -->
   </div>
-
-  <input type="radio" name="tabs" id="tabtwo">
-  <label for="tabtwo">Southern Hemisphere</label>
-  <div class="tab">
-
-    <!-- Secondary Tab System Start -->
-
-    <div class="tabssouthern">
-      <input type="radio" name="tabssouthern" id="tabssoutherncovid" checked="checked">
-      <label for="tabssoutherncovid">Covid Impact</label>
-      <div class="tab">
-        <iframe
-          id="southernhemisphere"
-          title=""
-          src="../../assets/data/02-02-2023/covidimpact_each_hemisphere/covidimpact_Southern hemisphere.html"
-          frameborder="0"
-          width="100%"
-          height="600"
-          allowtransparency
-        ></iframe>
-      </div>
-
-      <input type="radio" name="tabssouthern" id="tabssouthernweekly">
-      <label for="tabssouthernweekly">Weekly</label>
-      <div class="tab">
-        <iframe
-          id="southernhemisphereweekly"
-          title=""
-          src="../../assets/data/02-02-2023/weekly_each_hemisphere/weekly_Southern hemisphere.html"
-          frameborder="0"
-          width="100%"
-          height="600"
-          allowtransparency
-        ></iframe>
-      </div>
-
-      <input type="radio" name="tabssouthern" id="tabssouthernyearly">
-      <label for="tabssouthernyearly">Time Series</label>
-      <div class="tab">
-        <iframe
-          id="southernhemispheretimeseries"
-          title=""
-          src="../../assets/data/02-02-2023/timeseries_each_hemisphere/timeseries_Southern hemisphere.html"
-          frameborder="0"
-          width="100%"
-          height="600"
-          allowtransparency
-        ></iframe>
-      </div>
-    </div>
-
-    <!-- Secondary Tab System End -->
-  </div>
-</div>
 
 <style>
-  /**
- * Tabs
- */
-  .tabs {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .tabs label {
-    order: 1;
-    display: block;
-    padding: 1rem 2rem;
-    margin-right: 0.2rem;
-    cursor: pointer;
-    background: #333;
-    color: #fff;
-    font-weight: bold;
-    transition: background ease 0.2s;
-    margin-bottom:0;
-  }
-  .tabs .tab {
-    order: 99;
-    flex-grow: 1;
-    width: 100%;
-    display: none;
-    padding: 1rem;
-    background: #ddd;
-  }
-  .tabs input[type="radio"] {
-    display: none;
-  }
-  .tabs input[type="radio"]:checked + label {
-    background: #ddd;
+  .tabsnorthern label.sub-label {
+    background: transparent;
+    display: inline;
     color: #333;
+    padding: 0;
   }
-  .tabs input[type="radio"]:checked + label + .tab {
-    display: block;
-  }
-
-  @media (max-width: 45em) {
-    .tabs .tab,
-    .tabs label {
-      order: initial;
-    }
-    .tabs label {
-      width: 100%;
-      margin-right: 0;
-      margin-top: 0.2rem;
-    }
-  }
-
-</style>
-<style>
   /**
  * Sub Tabs
  */
@@ -224,9 +135,101 @@
     document.getElementById("northernhemisphere").src = "../../assets/data/" + getCookie("archive") + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
     document.getElementById("northernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/weekly_Northern hemisphere.html"
     document.getElementById("northernhemispheretimeseries").src = "../../assets/data/" + getCookie("archive") + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
-
-    document.getElementById("southernhemisphere").src = "../../assets/data/" + getCookie("archive") + "/covidimpact_each_hemisphere/covidimpact_Southern hemisphere.html"
-    document.getElementById("southernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/weekly_Southern hemisphere.html"
-    document.getElementById("southernhemispheretimeseries").src = "../../assets/data/" + getCookie("archive") + "/timeseries_each_hemisphere/timeseries_Southern hemisphere.html"
   }
+</script>
+
+<script>
+  const hemisphereTimeSeriesSelector = document.getElementById('hemisphere-time-series-selector');
+  const hemisphereWeeklySelector = document.getElementById('hemisphere-weekly-selector');
+  const hemisphereCovidSelector = document.getElementById('hemisphere-covid-selector');
+  const hemisphereCovidIframe = document.getElementById('northernhemisphere');
+  const hemisphereWeeklyIframe = document.getElementById('northernhemisphereweekly');
+  const hemisphereTimeSeriesIframe = document.getElementById('northernhemispheretimeseries');
+
+  let archiveValHemisphere = "02-02-2023";
+
+  if(getCookie("archive") !== null) {
+    archiveValHemisphere = getCookie("archive");
+    hemisphereCovidIframe.src = "../../assets/data/" + archiveValHemisphere + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html";
+    hemisphereWeeklyIframe.src = "../../assets/data/" + archiveValHemisphere + "/weekly_each_hemisphere/weekly_Northern hemisphere.html";
+    hemisphereTimeSeriesIframe.src = "../../assets/data/" + archiveValHemisphere + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html";
+  }
+
+  hemisphereCovidSelector.addEventListener('change',function(event) {
+    hemisphereCovidIframe.src = "../../assets/data/" + archiveValHemisphere + "/covidimpact_each_hemisphere/covidimpact_" + hemisphereCovidSelector.value + " hemisphere.html";
+
+    if(hemisphereCovidSelector.value !== hemisphereWeeklySelector.value) {
+      const opts = hemisphereWeeklySelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (hemisphereWeeklySelector.options[i].value === hemisphereCovidSelector.value) {
+          hemisphereWeeklySelector.options[i].selected = true;
+          hemisphereWeeklySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(hemisphereCovidSelector.value !== hemisphereTimeSeriesSelector.value) {
+      const optst = hemisphereTimeSeriesSelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (hemisphereTimeSeriesSelector.options[i].value === hemisphereCovidSelector.value) {
+          hemisphereTimeSeriesSelector.options[i].selected = true;
+          hemisphereTimeSeriesSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
+
+  hemisphereWeeklySelector.addEventListener('change',function(event) {
+    hemisphereWeeklyIframe.src = "../../assets/data/" + archiveValHemisphere + "/weekly_each_hemisphere/weekly_" + hemisphereWeeklySelector.value + " hemisphere.html";
+
+    if(hemisphereWeeklySelector.value !== hemisphereCovidSelector.value) {
+      const opts = hemisphereCovidSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (hemisphereCovidSelector.options[i].value === hemisphereWeeklySelector.value) {
+          hemisphereCovidSelector.options[i].selected = true;
+          hemisphereCovidSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(hemisphereWeeklySelector.value !== hemisphereTimeSeriesSelector.value) {
+      const optst = hemisphereTimeSeriesSelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (hemisphereTimeSeriesSelector.options[i].value === hemisphereWeeklySelector.value) {
+          hemisphereTimeSeriesSelector.options[i].selected = true;
+          hemisphereTimeSeriesSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
+
+  hemisphereTimeSeriesSelector.addEventListener('change',function(event) {
+    hemisphereTimeSeriesIframe.src = "../../assets/data/" + archiveValHemisphere + "/timeseries_each_hemisphere/timeseries_" + hemisphereTimeSeriesSelector.value + " hemisphere.html";
+
+    if(hemisphereTimeSeriesSelector.value !== hemisphereCovidSelector.value) {
+      const opts = hemisphereCovidSelector.options.length;
+      for (let i = 0; i < opts; i++) {
+        if (hemisphereCovidSelector.options[i].value === hemisphereTimeSeriesSelector.value) {
+          hemisphereCovidSelector.options[i].selected = true;
+          hemisphereCovidSelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+
+    if(hemisphereTimeSeriesSelector.value !== hemisphereWeeklySelector.value) {
+      const optst = hemisphereWeeklySelector.options.length;
+      for (let i = 0; i < optst; i++) {
+        if (hemisphereWeeklySelector.options[i].value === hemisphereTimeSeriesSelector.value) {
+          hemisphereWeeklySelector.options[i].selected = true;
+          hemisphereWeeklySelector.dispatchEvent(new Event('change'));
+          break;
+        }
+      }
+    }
+  });
 </script>
