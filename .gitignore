@@ -20,3 +20,4 @@ package-lock.json
 /.idea
 Gemfile.lock
 /docs
+/_site
