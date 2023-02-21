@@ -648,7 +648,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="297 words">
+  title="293 words">
   <em>1 min</em> read</span>
 
     </div>
@@ -1460,29 +1460,30 @@
   <input type="radio" name="tabsscatter" id="tabsscatterhemisphere" checked="checked" />
   <label for="tabsscatterhemisphere">Hemisphere</label>
   <div class="tab">
-    <label for="onset-hemisphere-year" class="sub-label">Year:</label>
-    <select id="onset-hemisphere-year">
-      <option value="preCovid_vs_2021_22" selected="selected">Pre Covid Vs 2021-2022</option>
-      <option value="preCovid_vs_2022_23">Pre Covid Vs 2022-2023</option>
-    </select>
-    <br />
     <label for="onset-hemisphere-selector" class="sub-label">Hemisphere:</label>
     <select id="onset-hemisphere-selector">
       <option value="Northern" selected="selected">Northern</option>
       <option value="Southern">Southern</option>
     </select>
-    <iframe id="scatter-selected-iframe-hemisphere" title="" src="../../assets/data/02-02-2023/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+
+    <div class="subscatter">
+      <input type="radio" name="subscatterhemisphere" id="subscatterhemisphere2021" checked="checked" />
+      <label for="subscatterhemisphere2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe id="scatter-selected-iframe-hemisphere" title="" src="../../assets/data/02-02-2023/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+      </div>
+
+      <input type="radio" name="subscatterhemisphere" id="subscatterhemisphere2022" />
+      <label for="subscatterhemisphere2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe id="scatter-selected-iframe-hemisphere-2022" title="" src="../../assets/data/02-02-2023/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+      </div>
+    </div>
   </div>
 
   <input type="radio" name="tabsscatter" id="tabsscatterregion" />
   <label for="tabsscatterregion">Region</label>
   <div class="tab">
-    <label for="onset-region-year" class="sub-label">Year:</label>
-    <select id="onset-region-year">
-      <option value="preCovid_vs_2021_22" selected="selected">Pre Covid Vs 2021-2022</option>
-      <option value="preCovid_vs_2022_23">Pre Covid Vs 2022-2023</option>
-    </select>
-    <br />
     <label for="onset-region-selector" class="sub-label">Region:</label>
     <select id="onset-region-selector">
       <option value="Africa" selected="selected">Africa</option>
@@ -1492,36 +1493,64 @@
       <option value="South East Asia">South East Asia</option>
       <option value="Western Pacific">Western Pacific</option>
     </select>
-    <iframe id="scatter-selected-iframe-region" title="" src="../../assets/data/02-02-2023/onset_each_region/Africa_region_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+
+    <div class="subscatter">
+      <input type="radio" name="subscatterregion" id="subscatterregion2021" checked="checked" />
+      <label for="subscatterregion2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe id="scatter-selected-iframe-region" title="" src="../../assets/data/02-02-2023/onset_each_region/Africa_region_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+      </div>
+
+      <input type="radio" name="subscatterregion" id="subscatterregion2022" />
+      <label for="subscatterregion2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe id="scatter-selected-iframe-region-2022" title="" src="../../assets/data/02-02-2023/onset_each_region/Africa_region_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+      </div>
+    </div>
   </div>
 
   <input type="radio" name="tabsscatter" id="tabsscatterclimatezones" />
   <label for="tabsscatterclimatezones">Climate Zones</label>
   <div class="tab">
-    <label for="onset-climate-zone-year" class="sub-label">Year:</label>
-    <select id="onset-climate-zone-year">
-      <option value="preCovid_vs_2021_22" selected="selected">Pre Covid Vs 2021-2022</option>
-      <option value="preCovid_vs_2022_23">Pre Covid Vs 2022-2023</option>
-    </select>
-    <br />
     <label for="onset-climate-zone-selector" class="sub-label">Climate Zone:</label>
     <select id="onset-climate-zone-selector">
       <option value="Temperate" selected="selected">Temperate</option>
       <option value="Sub-tropical">Subtropical</option>
       <option value="Tropical">Tropical</option>
     </select>
-    <iframe id="scatter-selected-iframe-climate-zones" title="" src="../../assets/data/02-02-2023/onset_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+
+    <div class="subscatter">
+      <input type="radio" name="subscatterclimatezone" id="subscatterclimatezone2021" checked="checked" />
+      <label for="subscatterclimatezone2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe id="scatter-selected-iframe-climate-zones" title="" src="../../assets/data/02-02-2023/onset_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+      </div>
+
+      <input type="radio" name="subscatterclimatezone" id="subscatterclimatezone2022" />
+      <label for="subscatterclimatezone2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe id="scatter-selected-iframe-climate-zones-2022" title="" src="../../assets/data/02-02-2023/onset_each_climatezone/Temperate_climazone_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+      </div>
+    </div>
   </div>
 
   <input type="radio" name="tabsscatter" id="tabsscatterusregion" />
   <label for="tabsscatterusregion">US Regions</label>
   <div class="tab">
-    <label for="onset-us-regions-year" class="sub-label">Year:</label>
-    <select id="onset-us-regions-year">
-      <option value="preCovid_vs_2021_22" selected="selected">Pre Covid Vs 2021-2022</option>
-      <option value="preCovid_vs_2022_23">Pre Covid Vs 2022-2023</option>
-    </select>
-    <iframe id="scatter-selected-iframe-us-region" title="" src="../../assets/data/02-02-2023/onset_each_USregion/United States_USregion_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+
+    <div class="subscatter">
+      <input type="radio" name="subscatterusregion" id="subscatterusregion2021" checked="checked" />
+      <label for="subscatterusregion2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe id="scatter-selected-iframe-us-region" title="" src="../../assets/data/02-02-2023/onset_each_USregion/United States_USregion_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+      </div>
+
+      <input type="radio" name="subscatterusregion" id="subscatterusregion2022" />
+      <label for="subscatterusregion2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe id="scatter-selected-iframe-us-region-2022" title="" src="../../assets/data/02-02-2023/onset_each_USregion/United States_USregion_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1585,6 +1614,66 @@
 
 </style>
 
+<style>
+
+  .subscatter label.sub-label {
+    background: transparent;
+    display: inline;
+    color: #333;
+    padding: 0;
+  }
+  /**
+ * Tabs
+ */
+  .subscatter {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .subscatter label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #555;
+    color: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    margin-bottom:0;
+  }
+  .subscatter .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #ddd;
+  }
+  .subscatter input[type="radio"] {
+    display: none;
+  }
+  .subscatter input[type="radio"]:checked + label {
+    background: #ddd;
+    color: #333;
+  }
+  .subscatter input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+
+  @media (max-width: 45em) {
+    .subscatter .tab,
+    .subscatter label {
+      order: initial;
+    }
+    .subscatter label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+</style>
+
 <script>
   function getCookie(name) {
     var nameEQ = name + "=";
@@ -1598,52 +1687,42 @@
   }
 
   const hemisphereIFrame = document.getElementById('scatter-selected-iframe-hemisphere');
+  const hemisphereIFrame2022 = document.getElementById('scatter-selected-iframe-hemisphere-2022');
   const regionIFrame = document.getElementById('scatter-selected-iframe-region');
+  const regionIFrame2022 = document.getElementById('scatter-selected-iframe-region-2022');
   const climateZonesIFrame = document.getElementById('scatter-selected-iframe-climate-zones');
+  const climateZonesIFrame2022 = document.getElementById('scatter-selected-iframe-climate-zones-2022');
   const usRegionsIFrame = document.getElementById('scatter-selected-iframe-us-region');
+  const usRegionsIFrame2022 = document.getElementById('scatter-selected-iframe-us-region-2022');
 
   const onsetHemisphereSelector = document.getElementById('onset-hemisphere-selector');
   const onsetRegionSelector = document.getElementById('onset-region-selector');
   const onsetClimateZoneSelector = document.getElementById('onset-climate-zone-selector');
 
-  const hemisphereYearSelector = document.getElementById('onset-hemisphere-year');
-  const regionYearSelector = document.getElementById('onset-region-year');
-  const climateZonesYearSelector = document.getElementById('onset-climate-zone-year');
-  const usRegionsYearSelector = document.getElementById('onset-us-regions-year');
-
   if(getCookie("archive") !== null) {
     hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html"
+    hemisphereIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2022_23.html"
     regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/Africa_region_preCovid_vs_2021_22.html"
+    regionIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/Africa_region_preCovid_vs_2022_23.html"
     climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html"
+    climateZonesIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/Temperate_climazone_preCovid_vs_2022_23.html"
     usRegionsIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_USregion/United States_USregion_preCovid_vs_2021_22.html"
+    usRegionsIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/onset_each_USregion/United States_USregion_preCovid_vs_2022_23.html"
   }
 
-  hemisphereYearSelector.addEventListener('change',function(event) {
-    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/" + onsetHemisphereSelector.value + " hemisphere_" + hemisphereYearSelector.value + ".html";
-  });
-
   onsetHemisphereSelector.addEventListener('change',function(event) {
-    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/" + onsetHemisphereSelector.value + " hemisphere_" + hemisphereYearSelector.value + ".html";
-  });
-
-  regionYearSelector.addEventListener('change',function(event) {
-    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/" + onsetRegionSelector.value + "_region_" + regionYearSelector.value + ".html";
+    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/" + onsetHemisphereSelector.value + " hemisphere_preCovid_vs_2021_22.html";
+    hemisphereIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/onset_each_hemisphere/" + onsetHemisphereSelector.value + " hemisphere_preCovid_vs_2022_23.html";
   });
 
   onsetRegionSelector.addEventListener('change',function(event) {
-    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/" + onsetRegionSelector.value + "_region_" + regionYearSelector.value + ".html";
-  });
-
-  climateZonesYearSelector.addEventListener('change',function(event) {
-    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/" + onsetClimateZoneSelector.value + "_climazone_" + climateZonesYearSelector.value + ".html";
+    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/" + onsetRegionSelector.value + "_region_preCovid_vs_2021_22.html";
+    regionIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/onset_each_region/" + onsetRegionSelector.value + "_region_preCovid_vs_2022_23.html";
   });
 
   onsetClimateZoneSelector.addEventListener('change',function(event) {
-    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/" + onsetClimateZoneSelector.value + "_climazone_" + climateZonesYearSelector.value + ".html";
-  });
-
-  usRegionsYearSelector.addEventListener('change',function(event) {
-    usRegionsIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_USregion/United States_USregion_" + usRegionsYearSelector.value + ".html";
+    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/" + onsetClimateZoneSelector.value + "_climazone_preCovid_vs_2021_22.html";
+    climateZonesIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/onset_each_climatezone/" + onsetClimateZoneSelector.value + "_climazone_preCovid_vs_2022_23.html";
   });
 
 </script>
