@@ -55,7 +55,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Understanding the patterns of global re-emergence of RSV following COVID19 pandemic" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"RSV Global Report","url":"https://github.com/RSVGlobalReport/"},"dateModified":"2023-04-20T18:40:22+00:00","datePublished":"2023-01-24T03:33:00+00:00","description":"Understanding the patterns of global re-emergence of RSV following COVID19 pandemic","headline":"Understanding the patterns of global re-emergence of RSV following COVID19 pandemic","mainEntityOfPage":{"@type":"WebPage","@id":"https://rsvglobalreport.github.io/dashboard/posts/dashboard/"},"url":"https://rsvglobalreport.github.io/dashboard/posts/dashboard/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"RSV Global Report","url":"https://github.com/RSVGlobalReport/"},"dateModified":"2023-04-20T20:40:05+00:00","datePublished":"2023-01-24T03:33:00+00:00","description":"Understanding the patterns of global re-emergence of RSV following COVID19 pandemic","headline":"Understanding the patterns of global re-emergence of RSV following COVID19 pandemic","mainEntityOfPage":{"@type":"WebPage","@id":"https://rsvglobalreport.github.io/dashboard/posts/dashboard/"},"url":"https://rsvglobalreport.github.io/dashboard/posts/dashboard/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -584,7 +584,7 @@
 
 
 <em class=""
-    data-ts="1682016022"
+    data-ts="1682023205"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
   Apr 20, 2023
@@ -636,7 +636,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="294 words">
+  title="307 words">
   <em>1 min</em> read</span>
 
     </div>
@@ -651,7 +651,9 @@
   <b>Version Select</b>:
   <select id="archive-selector">
     
-    <option value="03-19-2023" selected="selected">03-19-2023</option>
+    <option value="04-18-2023" selected="selected">04-18-2023</option>
+    
+    <option value="03-19-2023">03-19-2023</option>
     
     <option value="02-02-2023">02-02-2023</option>
     
@@ -710,7 +712,7 @@
           <option value="Northern" selected="selected">Northern</option>
           <option value="Southern">Southern</option>
         </select>
-        <iframe id="northernhemispheretimeseries" title="" src="../../assets/data/03-19-2023/timeseries_each_hemisphere/timeseries_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="northernhemispheretimeseries" title="" src="../../assets/data/04-18-2023/timeseries_each_hemisphere/timeseries_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
       <input type="radio" name="tabsnorthern" id="tabsnorthernweekly" />
@@ -721,7 +723,7 @@
           <option value="Northern" selected="selected">Northern</option>
           <option value="Southern">Southern</option>
         </select>
-        <iframe id="northernhemisphereweekly" title="" src="../../assets/data/03-19-2023/weekly_each_hemisphere/weekly_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="northernhemisphereweekly" title="" src="../../assets/data/04-18-2023/weekly_each_hemisphere/weekly_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
       <input type="radio" name="tabsnorthern" id="tabsnortherncovid" />
@@ -732,7 +734,7 @@
           <option value="Northern" selected="selected">Northern</option>
           <option value="Southern">Southern</option>
         </select>
-        <iframe id="northernhemisphere" title="" src="../../assets/data/03-19-2023/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="northernhemisphere" title="" src="../../assets/data/04-18-2023/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
     </div>
@@ -824,7 +826,7 @@
   const hemisphereWeeklyIframe = document.getElementById('northernhemisphereweekly');
   const hemisphereTimeSeriesIframe = document.getElementById('northernhemispheretimeseries');
 
-  let archiveValHemisphere = "03-19-2023";
+  let archiveValHemisphere = "04-18-2023";
 
   if(getCookie("archive") !== null) {
     archiveValHemisphere = getCookie("archive");
@@ -920,13 +922,14 @@
     <label for="time-series-region-selector" class="sub-label">Region:</label>
     <select id="time-series-region-selector">
       <option value="Africa" selected="selected">Africa</option>
-      <option value="Americas">Americas</option>
+      <option value="North Americas">North Americas</option>
+      <option value="South Americas">South Americas</option>
       <option value="Eastern Mediterranean">Eastern Mediterranean</option>
       <option value="Europe">Europe</option>
       <option value="South East Asia">South East Asia</option>
       <option value="Western Pacific">Western Pacific</option>
     </select>
-    <iframe id="time-series-region-selected-iframe" title="" src="../../assets/data/03-19-2023/timeseries_each_region/timeseries_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <iframe id="time-series-region-selected-iframe" title="" src="../../assets/data/04-18-2023/timeseries_each_region/timeseries_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 
   <input type="radio" name="tabsregion" id="tabsregionweekly" />
@@ -935,13 +938,14 @@
     <label for="weekly-region-selector" class="sub-label">Region:</label>
     <select id="weekly-region-selector">
       <option value="Africa" selected="selected">Africa</option>
-      <option value="Americas">Americas</option>
+      <option value="North Americas">North Americas</option>
+      <option value="South Americas">South Americas</option>
       <option value="Eastern Mediterranean">Eastern Mediterranean</option>
       <option value="Europe">Europe</option>
       <option value="South East Asia">South East Asia</option>
       <option value="Western Pacific">Western Pacific</option>
     </select>
-    <iframe id="weekly-region-selected-iframe" title="" src="../../assets/data/03-19-2023/weekly_each_region/weekly_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <iframe id="weekly-region-selected-iframe" title="" src="../../assets/data/04-18-2023/weekly_each_region/weekly_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 
   <input type="radio" name="tabsregion" id="tabsregioncovid" />
@@ -950,13 +954,14 @@
     <label for="region-selector" class="sub-label">Region:</label>
     <select id="region-selector">
       <option value="Africa" selected="selected">Africa</option>
-      <option value="Americas">Americas</option>
+      <option value="North Americas">North Americas</option>
+      <option value="South Americas">South Americas</option>
       <option value="Eastern Mediterranean">Eastern Mediterranean</option>
       <option value="Europe">Europe</option>
       <option value="South East Asia">South East Asia</option>
       <option value="Western Pacific">Western Pacific</option>
     </select>
-    <iframe id="region-selected-iframe" title="" src="../../assets/data/03-19-2023/covidimpact_each_region/covidimpact_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <iframe id="region-selected-iframe" title="" src="../../assets/data/04-18-2023/covidimpact_each_region/covidimpact_Africa.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 </div>
 
@@ -1039,7 +1044,7 @@
   const weeklyRegionIframe = document.getElementById('weekly-region-selected-iframe');
   const timeseriesRegionIframe = document.getElementById('time-series-region-selected-iframe');
 
-  let archiveValRegion = "03-19-2023";
+  let archiveValRegion = "04-18-2023";
 
   if(getCookie("archive") !== null) {
     archiveValRegion = getCookie("archive");
@@ -1178,7 +1183,7 @@
       <option value="Sweden">Sweden</option>
       <option value="Uruguay">Uruguay</option>
     </select>
-    <iframe id="time-series-selected-iframe" title="" src="../../assets/data/03-19-2023/timeseries_each_country/timeseries_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <iframe id="time-series-selected-iframe" title="" src="../../assets/data/04-18-2023/timeseries_each_country/timeseries_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 
   <input type="radio" name="tabscountry" id="tabscountryweekly" />
@@ -1230,7 +1235,7 @@
       <option value="Sweden">Sweden</option>
       <option value="Uruguay">Uruguay</option>
     </select>
-    <iframe id="weekly-country-selected-iframe" title="" src="../../assets/data/03-19-2023/weekly_each_country/weekly_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <iframe id="weekly-country-selected-iframe" title="" src="../../assets/data/04-18-2023/weekly_each_country/weekly_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 
   <input type="radio" name="tabscountry" id="tabscountrycovid" />
@@ -1282,7 +1287,7 @@
       <option value="Sweden">Sweden</option>
       <option value="Uruguay">Uruguay</option>
     </select>
-    <iframe id="country-selected-iframe" title="" src="../../assets/data/03-19-2023/covidimpact_each_country/covidimpact_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+    <iframe id="country-selected-iframe" title="" src="../../assets/data/04-18-2023/covidimpact_each_country/covidimpact_Argentina.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
   </div>
 </div>
 
@@ -1353,7 +1358,7 @@
   const weeklyCountryIframe = document.getElementById('weekly-country-selected-iframe');
   const timeSeriesCountryIframe = document.getElementById('time-series-selected-iframe');
 
-  let archiveVal = "03-19-2023";
+  let archiveVal = "04-18-2023";
 
   if(getCookie("archive") !== null) {
     archiveVal = getCookie("archive");
@@ -1467,13 +1472,13 @@
       <input type="radio" name="subscatterhemisphere" id="subscatterhemisphere2021" checked="checked" />
       <label for="subscatterhemisphere2021">Pre Covid Vs 2021-2022</label>
       <div class="tab">
-        <iframe id="scatter-selected-iframe-hemisphere" title="" src="../../assets/data/03-19-2023/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="scatter-selected-iframe-hemisphere" title="" src="../../assets/data/04-18-2023/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
       <input type="radio" name="subscatterhemisphere" id="subscatterhemisphere2022" />
       <label for="subscatterhemisphere2022">Pre Covid Vs 2022-2023</label>
       <div class="tab">
-        <iframe id="scatter-selected-iframe-hemisphere-2022" title="" src="../../assets/data/03-19-2023/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="scatter-selected-iframe-hemisphere-2022" title="" src="../../assets/data/04-18-2023/onset_each_hemisphere/Northern hemisphere_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
     </div>
   </div>
@@ -1484,7 +1489,8 @@
     <label for="onset-region-selector" class="sub-label">Region:</label>
     <select id="onset-region-selector">
       <option value="Africa" selected="selected">Africa</option>
-      <option value="Americas">Americas</option>
+      <option value="North Americas">North Americas</option>
+      <option value="South Americas">South Americas</option>
       <option value="Eastern Mediterranean">Eastern Mediterranean</option>
       <option value="Europe">Europe</option>
       <option value="South East Asia">South East Asia</option>
@@ -1495,13 +1501,13 @@
       <input type="radio" name="subscatterregion" id="subscatterregion2021" checked="checked" />
       <label for="subscatterregion2021">Pre Covid Vs 2021-2022</label>
       <div class="tab">
-        <iframe id="scatter-selected-iframe-region" title="" src="../../assets/data/03-19-2023/onset_each_region/Africa_region_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="scatter-selected-iframe-region" title="" src="../../assets/data/04-18-2023/onset_each_region/Africa_region_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
       <input type="radio" name="subscatterregion" id="subscatterregion2022" />
       <label for="subscatterregion2022">Pre Covid Vs 2022-2023</label>
       <div class="tab">
-        <iframe id="scatter-selected-iframe-region-2022" title="" src="../../assets/data/03-19-2023/onset_each_region/Africa_region_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="scatter-selected-iframe-region-2022" title="" src="../../assets/data/04-18-2023/onset_each_region/Africa_region_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
     </div>
   </div>
@@ -1520,13 +1526,13 @@
       <input type="radio" name="subscatterclimatezone" id="subscatterclimatezone2021" checked="checked" />
       <label for="subscatterclimatezone2021">Pre Covid Vs 2021-2022</label>
       <div class="tab">
-        <iframe id="scatter-selected-iframe-climate-zones" title="" src="../../assets/data/03-19-2023/onset_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="scatter-selected-iframe-climate-zones" title="" src="../../assets/data/04-18-2023/onset_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
       <input type="radio" name="subscatterclimatezone" id="subscatterclimatezone2022" />
       <label for="subscatterclimatezone2022">Pre Covid Vs 2022-2023</label>
       <div class="tab">
-        <iframe id="scatter-selected-iframe-climate-zones-2022" title="" src="../../assets/data/03-19-2023/onset_each_climatezone/Temperate_climazone_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="scatter-selected-iframe-climate-zones-2022" title="" src="../../assets/data/04-18-2023/onset_each_climatezone/Temperate_climazone_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
     </div>
   </div>
@@ -1539,13 +1545,13 @@
       <input type="radio" name="subscatterusregion" id="subscatterusregion2021" checked="checked" />
       <label for="subscatterusregion2021">Pre Covid Vs 2021-2022</label>
       <div class="tab">
-        <iframe id="scatter-selected-iframe-us-region" title="" src="../../assets/data/03-19-2023/onset_each_USregion/United States_USregion_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="scatter-selected-iframe-us-region" title="" src="../../assets/data/04-18-2023/onset_each_USregion/United States_USregion_preCovid_vs_2021_22.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
 
       <input type="radio" name="subscatterusregion" id="subscatterusregion2022" />
       <label for="subscatterusregion2022">Pre Covid Vs 2022-2023</label>
       <div class="tab">
-        <iframe id="scatter-selected-iframe-us-region-2022" title="" src="../../assets/data/03-19-2023/onset_each_USregion/United States_USregion_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
+        <iframe id="scatter-selected-iframe-us-region-2022" title="" src="../../assets/data/04-18-2023/onset_each_USregion/United States_USregion_preCovid_vs_2022_23.html" frameborder="0" width="100%" height="600" allowtransparency=""></iframe>
       </div>
     </div>
   </div>
