@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - test
+      - feature/fix-pipeline
     paths-ignore:
       - .gitignore
       - README.md
