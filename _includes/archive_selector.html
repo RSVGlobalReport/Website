@@ -1,4 +1,11 @@
-<div style="display: block; text-align: right;"><b>Version Select</b>: <select id="archive-selector">{% for archive in include.archives %}<option value="{{ archive }}" {% if forloop.first %} selected="selected" {% endif %}>{{ archive }}</option>{% endfor %}</select></div>
+<div style="display: block; text-align: right;">
+  <b>Version Select</b>:
+  <select id="archive-selector">
+    {% for archive in include.archives %}
+    <option value="{{ archive }}" {% if forloop.first %} selected="selected" {% endif %}>{{ archive }}</option>
+    {% endfor %}
+  </select>
+</div>
 
 <script>
   const archive = "archive";
