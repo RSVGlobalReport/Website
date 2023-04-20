@@ -13,7 +13,6 @@
       <option value="Central African Republic" >Central African Republic</option>
       <option value="Colombia" >Colombia</option>
       <option value="Costa Rica" >Costa Rica</option>
-      <option value="Cote" >Côte d'Ivoire</option>
       <option value="Denmark" >Denmark</option>
       <option value="Dominica" >Dominica</option>
       <option value="Ecuador" >Ecuador</option>
@@ -27,6 +26,7 @@
       <option value="Iceland" >Iceland</option>
       <option value="India" >India</option>
       <option value="Ireland" >Ireland</option>
+      <option value="Ivory Coast" >Ivory Coast</option>
       <option value="Japan" >Japan</option>
       <option value="Madagascar" >Madagascar</option>
       <option value="Malaysia" >Malaysia</option>
@@ -51,7 +51,7 @@
     <iframe
       id="time-series-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/timeseries_each_country/timeseries_Argentina.html"
+      src="../../assets/data/{{ include.default_archive }}/timeseries_each_country/timeseries_Argentina.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -73,7 +73,6 @@
       <option value="Central African Republic" >Central African Republic</option>
       <option value="Colombia" >Colombia</option>
       <option value="Costa Rica" >Costa Rica</option>
-      <option value="Cote" >Côte d'Ivoire</option>
       <option value="Denmark" >Denmark</option>
       <option value="Dominica" >Dominica</option>
       <option value="Ecuador" >Ecuador</option>
@@ -87,6 +86,7 @@
       <option value="Iceland" >Iceland</option>
       <option value="India" >India</option>
       <option value="Ireland" >Ireland</option>
+      <option value="Ivory Coast" >Ivory Coast</option>
       <option value="Japan" >Japan</option>
       <option value="Madagascar" >Madagascar</option>
       <option value="Malaysia" >Malaysia</option>
@@ -111,7 +111,7 @@
     <iframe
       id="weekly-country-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/weekly_each_country/weekly_Argentina.html"
+      src="../../assets/data/{{ include.default_archive }}/weekly_each_country/weekly_Argentina.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -133,7 +133,6 @@
       <option value="Central African Republic" >Central African Republic</option>
       <option value="Colombia" >Colombia</option>
       <option value="Costa Rica" >Costa Rica</option>
-      <option value="Cote" >Côte d'Ivoire</option>
       <option value="Denmark" >Denmark</option>
       <option value="Dominica" >Dominica</option>
       <option value="Ecuador" >Ecuador</option>
@@ -147,6 +146,7 @@
       <option value="Iceland" >Iceland</option>
       <option value="India" >India</option>
       <option value="Ireland" >Ireland</option>
+      <option value="Ivory Coast" >Ivory Coast</option>
       <option value="Japan" >Japan</option>
       <option value="Madagascar" >Madagascar</option>
       <option value="Malaysia" >Malaysia</option>
@@ -171,7 +171,7 @@
     <iframe
       id="country-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/covidimpact_each_country/covidimpact_Argentina.html"
+      src="../../assets/data/{{ include.default_archive }}/covidimpact_each_country/covidimpact_Argentina.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -247,7 +247,7 @@
   const weeklyCountryIframe = document.getElementById('weekly-country-selected-iframe');
   const timeSeriesCountryIframe = document.getElementById('time-series-selected-iframe');
 
-  let archiveVal = "02-02-2023";
+  let archiveVal = "{{ include.default_archive }}";
 
   if(getCookie("archive") !== null) {
     archiveVal = getCookie("archive");

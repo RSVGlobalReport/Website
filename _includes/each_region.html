@@ -14,7 +14,7 @@
     <iframe
       id="time-series-region-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/timeseries_each_region/timeseries_Africa.html"
+      src="../../assets/data/{{ include.default_archive }}/timeseries_each_region/timeseries_Africa.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -37,7 +37,7 @@
     <iframe
       id="weekly-region-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/weekly_each_region/weekly_Africa.html"
+      src="../../assets/data/{{ include.default_archive }}/weekly_each_region/weekly_Africa.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -60,7 +60,7 @@
     <iframe
       id="region-selected-iframe"
       title=""
-      src="../../assets/data/02-02-2023/covidimpact_each_region/covidimpact_Africa.html"
+      src="../../assets/data/{{ include.default_archive }}/covidimpact_each_region/covidimpact_Africa.html"
       frameborder="0"
       width="100%"
       height="600"
@@ -148,7 +148,7 @@
   const weeklyRegionIframe = document.getElementById('weekly-region-selected-iframe');
   const timeseriesRegionIframe = document.getElementById('time-series-region-selected-iframe');
 
-  let archiveValRegion = "02-02-2023";
+  let archiveValRegion = "{{ include.default_archive }}";
 
   if(getCookie("archive") !== null) {
     archiveValRegion = getCookie("archive");
