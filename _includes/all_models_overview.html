@@ -1,0 +1,29 @@
+<iframe
+          id="all-models-overview"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/all_models_overview/schematicDiag.drawio.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+
+<script>
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  const allModelsOverview = document.getElementById('all-models-overview');
+
+  if(getCookie("archive") !== null) {
+    allModelsOverview.src = "../../assets/data/" + getCookie("archive") + "/all_models_overview/schematicDiag.drawio.html"
+  }
+
+</script>
