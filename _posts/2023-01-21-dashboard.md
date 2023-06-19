@@ -33,7 +33,7 @@ mermaid: true
 {% include each_growth.html default_archive=default_archive %}
 
 ## RSV Intensity
-{% include each_onset_scatter.html default_archive=default_archive %}
+{% include each_intensity.html default_archive=default_archive %}
 
 ## Seasonal Metrics Calculation
-{% include each_onset_scatter.html default_archive=default_archive %}
+{% include all_models_overview.html default_archive=default_archive %}
