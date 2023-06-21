@@ -1,0 +1,457 @@
+<div class="tabspeak">
+  <input type="radio" name="tabspeak" id="tabspeakoverall">
+  <label for="tabspeakoverall">Overall</label>
+  <div class="tab">
+
+    <div class="subpeak">
+      <input type="radio" name="subpeakoverall" id="subpeakoverall2021" checked="checked">
+      <label for="subpeakoverall2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-overall"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_all_countries/all_countries_preCovid_vs_2021_22.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakoverall" id="subpeakoverall2022">
+      <label for="subpeakoverall2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-overall-2022"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_all_countries/all_countries_preCovid_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakoverall" id="subpeakoverall2023">
+      <label for="subpeakoverall2023">2021-2022 Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-overall-2023"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_all_countries/all_countries_2021_22_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <input type="radio" name="tabspeak" id="tabspeakhemisphere">
+  <label for="tabspeakhemisphere">Hemisphere</label>
+  <div class="tab">
+    <label for="peak-hemisphere-selector" class="sub-label">Hemisphere:</label>
+    <select id="peak-hemisphere-selector">
+      <option value="Northern" selected="selected">Northern</option>
+      <option value="Southern">Southern</option>
+    </select>
+
+    <div class="subpeak">
+      <input type="radio" name="subpeakhemisphere" id="subpeakhemisphere2021" checked="checked">
+      <label for="subpeakhemisphere2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-hemisphere"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakhemisphere" id="subpeakhemisphere2022">
+      <label for="subpeakhemisphere2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-hemisphere-2022"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_hemisphere/Northern hemisphere_preCovid_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakhemisphere" id="subpeakhemisphere2023">
+      <label for="subpeakhemisphere2023">2021-2022 Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-hemisphere-2023"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_hemisphere/Northern hemisphere_2021_22_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <input type="radio" name="tabspeak" id="tabspeakregion">
+  <label for="tabspeakregion">Region</label>
+  <div class="tab">
+    <label for="peak-region-selector" class="sub-label">Region:</label>
+    <select id="peak-region-selector">
+      <option value="Africa" selected="selected">Africa</option>
+      <option value="North Americas" >North Americas</option>
+      <option value="South Americas" >South Americas</option>
+      <option value="Eastern Mediterranean" >Eastern Mediterranean</option>
+      <option value="Europe" >Europe</option>
+      <option value="South East Asia" >South East Asia</option>
+      <option value="Western Pacific" >Western Pacific</option>
+    </select>
+
+    <div class="subpeak">
+      <input type="radio" name="subpeakregion" id="subpeakregion2021" checked="checked">
+      <label for="subpeakregion2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-region"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_region/Africa_region_preCovid_vs_2021_22.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakregion" id="subpeakregion2022">
+      <label for="subpeakregion2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-region-2022"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_region/Africa_region_preCovid_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakregion" id="subpeakregion2023">
+      <label for="subpeakregion2023">2021-2022 Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-region-2023"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_region/Africa_region_2021_22_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <input type="radio" name="tabspeak" id="tabspeakclimatezones">
+  <label for="tabspeakclimatezones">Climate Zones</label>
+  <div class="tab">
+    <label for="peak-climate-zone-selector" class="sub-label">Climate Zone:</label>
+    <select id="peak-climate-zone-selector">
+      <option value="Temperate" selected="selected">Temperate</option>
+      <option value="Sub-tropical" >Subtropical</option>
+      <option value="Tropical" >Tropical</option>
+    </select>
+
+    <div class="subpeak">
+      <input type="radio" name="subpeakclimatezone" id="subpeakclimatezone2021" checked="checked">
+      <label for="subpeakclimatezone2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-climate-zones"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakclimatezone" id="subpeakclimatezone2022">
+      <label for="subpeakclimatezone2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-climate-zones-2022"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_climatezone/Temperate_climazone_preCovid_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakclimatezone" id="subpeakclimatezone2023">
+      <label for="subpeakclimatezone2023">2021-2022 Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-climate-zones-2023"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_climatezone/Temperate_climazone_2021_22_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <input type="radio" name="tabspeak" id="tabspeakusregion">
+  <label for="tabspeakusregion">US Regions</label>
+  <div class="tab">
+
+    <div class="subpeak">
+      <input type="radio" name="subpeakusregion" id="subpeakusregion2021" checked="checked">
+      <label for="subpeakusregion2021">Pre Covid Vs 2021-2022</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-us-region"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_USregion/United States_USregion_preCovid_vs_2021_22.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakusregion" id="subpeakusregion2022">
+      <label for="subpeakusregion2022">Pre Covid Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-us-region-2022"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_USregion/United States_USregion_preCovid_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+
+      <input type="radio" name="subpeakusregion" id="subpeakusregion2023">
+      <label for="subpeakusregion2023">2021-2022 Vs 2022-2023</label>
+      <div class="tab">
+        <iframe
+          id="peak-selected-iframe-us-region-2023"
+          title=""
+          src="../../assets/data/{{ include.default_archive }}/peak_each_USregion/United States_USregion_2021_22_vs_2022_23.html"
+          frameborder="0"
+          width="100%"
+          height="600"
+          allowtransparency
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+  .tabspeak label.sub-label {
+    background: transparent;
+    display: inline;
+    color: #333;
+    padding: 0;
+  }
+  /**
+ * Tabs
+ */
+  .tabspeak {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tabspeak label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    margin-bottom:0;
+  }
+  .tabspeak .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+  }
+  .tabspeak input[type="radio"] {
+    display: none;
+  }
+  .tabspeak input[type="radio"]:checked + label {
+    background: #fff;
+    color: #333;
+  }
+  .tabspeak input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+
+  @media (max-width: 45em) {
+    .tabspeak .tab,
+    .tabspeak label {
+      order: initial;
+    }
+    .tabspeak label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+</style>
+
+<style>
+
+  .subpeak label.sub-label {
+    background: transparent;
+    display: inline;
+    color: #333;
+    padding: 0;
+  }
+  /**
+ * Tabs
+ */
+  .subpeak {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .subpeak label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #555;
+    color: #fff;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    margin-bottom:0;
+  }
+  .subpeak .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #ddd;
+  }
+  .subpeak input[type="radio"] {
+    display: none;
+  }
+  .subpeak input[type="radio"]:checked + label {
+    background: #ddd;
+    color: #333;
+  }
+  .subpeak input[type="radio"]:checked + label + .tab {
+    display: block;
+  }
+
+  @media (max-width: 45em) {
+    .subpeak .tab,
+    .subpeak label {
+      order: initial;
+    }
+    .subpeak label {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+</style>
+
+<script>
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  const overallIFrame = document.getElementById('peak-selected-iframe-overall');
+  const overallIFrame2022 = document.getElementById('peak-selected-iframe-overall-2022');
+  const overallIFrame2023 = document.getElementById('peak-selected-iframe-overall-2023');
+  const hemisphereIFrame = document.getElementById('peak-selected-iframe-hemisphere');
+  const hemisphereIFrame2022 = document.getElementById('peak-selected-iframe-hemisphere-2022');
+  const hemisphereIFrame2023 = document.getElementById('peak-selected-iframe-hemisphere-2023');
+  const regionIFrame = document.getElementById('peak-selected-iframe-region');
+  const regionIFrame2022 = document.getElementById('peak-selected-iframe-region-2022');
+  const regionIFrame2023 = document.getElementById('peak-selected-iframe-region-2023');
+  const climateZonesIFrame = document.getElementById('peak-selected-iframe-climate-zones');
+  const climateZonesIFrame2022 = document.getElementById('peak-selected-iframe-climate-zones-2022');
+  const climateZonesIFrame2023 = document.getElementById('peak-selected-iframe-climate-zones-2023');
+  const usRegionsIFrame = document.getElementById('peak-selected-iframe-us-region');
+  const usRegionsIFrame2022 = document.getElementById('peak-selected-iframe-us-region-2022');
+  const usRegionsIFrame2023 = document.getElementById('peak-selected-iframe-us-region-2023');
+
+  const peakHemisphereSelector = document.getElementById('peak-hemisphere-selector');
+  const peakRegionSelector = document.getElementById('peak-region-selector');
+  const peakClimateZoneSelector = document.getElementById('peak-climate-zone-selector');
+
+  if(getCookie("archive") !== null) {
+    overallIFrame.src = "../../assets/data/" + getCookie("archive") + "/peak_all_countries/all_countries_preCovid_vs_2021_22.html"
+    overallIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/peak_all_countries/all_countries_preCovid_vs_2022_23.html"
+    overallIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/peak_all_countries/all_countries_2021_22_vs_2022_23.html"
+    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/peak_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html"
+    hemisphereIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/peak_each_hemisphere/Northern hemisphere_preCovid_vs_2022_23.html"
+    hemisphereIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/peak_each_hemisphere/Northern hemisphere_2021_22_vs_2022_23.html"
+    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/peak_each_region/Africa_region_preCovid_vs_2021_22.html"
+    regionIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/peak_each_region/Africa_region_preCovid_vs_2022_23.html"
+    regionIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/peak_each_region/Africa_region_2021_22_vs_2022_23.html"
+    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/peak_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html"
+    climateZonesIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/peak_each_climatezone/Temperate_climazone_preCovid_vs_2022_23.html"
+    climateZonesIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/peak_each_climatezone/Temperate_climazone_2021_22_vs_2022_23.html"
+    usRegionsIFrame.src = "../../assets/data/" + getCookie("archive") + "/peak_each_USregion/United States_USregion_preCovid_vs_2021_22.html"
+    usRegionsIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/peak_each_USregion/United States_USregion_preCovid_vs_2022_23.html"
+    usRegionsIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/peak_each_USregion/United States_USregion_2021_22_vs_2022_23.html"
+  }
+
+  peakHemisphereSelector.addEventListener('change',function(event) {
+    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/peak_each_hemisphere/" + peakHemisphereSelector.value + " hemisphere_preCovid_vs_2021_22.html";
+    hemisphereIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/peak_each_hemisphere/" + peakHemisphereSelector.value + " hemisphere_preCovid_vs_2022_23.html";
+    hemisphereIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/peak_each_hemisphere/" + peakHemisphereSelector.value + " hemisphere_2021_22_vs_2022_23.html";
+  });
+
+  peakRegionSelector.addEventListener('change',function(event) {
+    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/peak_each_region/" + peakRegionSelector.value + "_region_preCovid_vs_2021_22.html";
+    regionIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/peak_each_region/" + peakRegionSelector.value + "_region_preCovid_vs_2022_23.html";
+    regionIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/peak_each_region/" + peakRegionSelector.value + "_region_2021_22_vs_2022_23.html";
+  });
+
+  peakClimateZoneSelector.addEventListener('change',function(event) {
+    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/peak_each_climatezone/" + peakClimateZoneSelector.value + "_climazone_preCovid_vs_2021_22.html";
+    climateZonesIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/peak_each_climatezone/" + peakClimateZoneSelector.value + "_climazone_preCovid_vs_2022_23.html";
+    climateZonesIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/peak_each_climatezone/" + peakClimateZoneSelector.value + "_climazone_2021_22_vs_2022_23.html";
+  });
+
+</script>
