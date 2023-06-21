@@ -23,5 +23,17 @@ mermaid: true
 ## RSV Cases By Country
 {% include each_country.html default_archive=default_archive %}
 
-## RSV Onset
+## RSV Onset Timing
 {% include each_onset_scatter.html default_archive=default_archive %}
+
+## RSV Peak Timing
+{% include each_peak.html default_archive=default_archive %}
+
+## RSV Growth Rate
+{% include each_growth.html default_archive=default_archive %}
+
+## RSV Intensity
+{% include each_intensity.html default_archive=default_archive %}
+
+## Seasonal Metrics Calculation
+{% include all_models_overview.html default_archive=default_archive %}
