@@ -398,60 +398,60 @@
     return null;
   }
 
-  const overallIFrame = document.getElementById('growth-selected-iframe-overall');
-  const overallIFrame2022 = document.getElementById('growth-selected-iframe-overall-2022');
-  const overallIFrame2023 = document.getElementById('growth-selected-iframe-overall-2023');
-  const hemisphereIFrame = document.getElementById('growth-selected-iframe-hemisphere');
-  const hemisphereIFrame2022 = document.getElementById('growth-selected-iframe-hemisphere-2022');
-  const hemisphereIFrame2023 = document.getElementById('growth-selected-iframe-hemisphere-2023');
-  const regionIFrame = document.getElementById('growth-selected-iframe-region');
-  const regionIFrame2022 = document.getElementById('growth-selected-iframe-region-2022');
-  const regionIFrame2023 = document.getElementById('growth-selected-iframe-region-2023');
-  const climateZonesIFrame = document.getElementById('growth-selected-iframe-climate-zones');
-  const climateZonesIFrame2022 = document.getElementById('growth-selected-iframe-climate-zones-2022');
-  const climateZonesIFrame2023 = document.getElementById('growth-selected-iframe-climate-zones-2023');
-  const usRegionsIFrame = document.getElementById('growth-selected-iframe-us-region');
-  const usRegionsIFrame2022 = document.getElementById('growth-selected-iframe-us-region-2022');
-  const usRegionsIFrame2023 = document.getElementById('growth-selected-iframe-us-region-2023');
+  const overallIFrameGrowth = document.getElementById('growth-selected-iframe-overall');
+  const overallIFrame2022Growth = document.getElementById('growth-selected-iframe-overall-2022');
+  const overallIFrame2023Growth = document.getElementById('growth-selected-iframe-overall-2023');
+  const hemisphereIFrameGrowth = document.getElementById('growth-selected-iframe-hemisphere');
+  const hemisphereIFrame2022Growth = document.getElementById('growth-selected-iframe-hemisphere-2022');
+  const hemisphereIFrame2023Growth = document.getElementById('growth-selected-iframe-hemisphere-2023');
+  const regionIFrameGrowth = document.getElementById('growth-selected-iframe-region');
+  const regionIFrame2022Growth = document.getElementById('growth-selected-iframe-region-2022');
+  const regionIFrame2023Growth = document.getElementById('growth-selected-iframe-region-2023');
+  const climateZonesIFrameGrowth = document.getElementById('growth-selected-iframe-climate-zones');
+  const climateZonesIFrame2022Growth = document.getElementById('growth-selected-iframe-climate-zones-2022');
+  const climateZonesIFrame2023Growth = document.getElementById('growth-selected-iframe-climate-zones-2023');
+  const usRegionsIFrameGrowth = document.getElementById('growth-selected-iframe-us-region');
+  const usRegionsIFrame2022Growth = document.getElementById('growth-selected-iframe-us-region-2022');
+  const usRegionsIFrame2023Growth = document.getElementById('growth-selected-iframe-us-region-2023');
 
   const growthHemisphereSelector = document.getElementById('growth-hemisphere-selector');
   const growthRegionSelector = document.getElementById('growth-region-selector');
   const growthClimateZoneSelector = document.getElementById('growth-climate-zone-selector');
 
   if(getCookie("archive") !== null) {
-    overallIFrame.src = "../../assets/data/" + getCookie("archive") + "/growth_all_countries/all_countries_preCovid_vs_2021_22.html"
-    overallIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/growth_all_countries/all_countries_preCovid_vs_2022_23.html"
-    overallIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/growth_all_countries/all_countries_2021_22_vs_2022_23.html"
-    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html"
-    hemisphereIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/Northern hemisphere_preCovid_vs_2022_23.html"
-    hemisphereIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/Northern hemisphere_2021_22_vs_2022_23.html"
-    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/Africa_region_preCovid_vs_2021_22.html"
-    regionIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/Africa_region_preCovid_vs_2022_23.html"
-    regionIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/Africa_region_2021_22_vs_2022_23.html"
-    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html"
-    climateZonesIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/Temperate_climazone_preCovid_vs_2022_23.html"
-    climateZonesIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/Temperate_climazone_2021_22_vs_2022_23.html"
-    usRegionsIFrame.src = "../../assets/data/" + getCookie("archive") + "/growth_each_USregion/United States_USregion_preCovid_vs_2021_22.html"
-    usRegionsIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/growth_each_USregion/United States_USregion_preCovid_vs_2022_23.html"
-    usRegionsIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/growth_each_USregion/United States_USregion_2021_22_vs_2022_23.html"
+    overallIFrameGrowth.src = "../../assets/data/" + getCookie("archive") + "/growth_all_countries/all_countries_preCovid_vs_2021_22.html"
+    overallIFrame2022Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_all_countries/all_countries_preCovid_vs_2022_23.html"
+    overallIFrame2023Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_all_countries/all_countries_2021_22_vs_2022_23.html"
+    hemisphereIFrameGrowth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/Northern hemisphere_preCovid_vs_2021_22.html"
+    hemisphereIFrame2022Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/Northern hemisphere_preCovid_vs_2022_23.html"
+    hemisphereIFrame2023Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/Northern hemisphere_2021_22_vs_2022_23.html"
+    regionIFrameGrowth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/Africa_region_preCovid_vs_2021_22.html"
+    regionIFrame2022Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/Africa_region_preCovid_vs_2022_23.html"
+    regionIFrame2023Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/Africa_region_2021_22_vs_2022_23.html"
+    climateZonesIFrameGrowth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/Temperate_climazone_preCovid_vs_2021_22.html"
+    climateZonesIFrame2022Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/Temperate_climazone_preCovid_vs_2022_23.html"
+    climateZonesIFrame2023Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/Temperate_climazone_2021_22_vs_2022_23.html"
+    usRegionsIFrameGrowth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_USregion/United States_USregion_preCovid_vs_2021_22.html"
+    usRegionsIFrame2022Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_USregion/United States_USregion_preCovid_vs_2022_23.html"
+    usRegionsIFrame2023Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_USregion/United States_USregion_2021_22_vs_2022_23.html"
   }
 
   growthHemisphereSelector.addEventListener('change',function(event) {
-    hemisphereIFrame.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/" + growthHemisphereSelector.value + " hemisphere_preCovid_vs_2021_22.html";
-    hemisphereIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/" + growthHemisphereSelector.value + " hemisphere_preCovid_vs_2022_23.html";
-    hemisphereIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/" + growthHemisphereSelector.value + " hemisphere_2021_22_vs_2022_23.html";
+    hemisphereIFrameGrowth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/" + growthHemisphereSelector.value + " hemisphere_preCovid_vs_2021_22.html";
+    hemisphereIFrame2022Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/" + growthHemisphereSelector.value + " hemisphere_preCovid_vs_2022_23.html";
+    hemisphereIFrame2023Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_hemisphere/" + growthHemisphereSelector.value + " hemisphere_2021_22_vs_2022_23.html";
   });
 
   growthRegionSelector.addEventListener('change',function(event) {
-    regionIFrame.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/" + growthRegionSelector.value + "_region_preCovid_vs_2021_22.html";
-    regionIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/" + growthRegionSelector.value + "_region_preCovid_vs_2022_23.html";
-    regionIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/" + growthRegionSelector.value + "_region_2021_22_vs_2022_23.html";
+    regionIFrameGrowth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/" + growthRegionSelector.value + "_region_preCovid_vs_2021_22.html";
+    regionIFrame2022Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/" + growthRegionSelector.value + "_region_preCovid_vs_2022_23.html";
+    regionIFrame2023Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_region/" + growthRegionSelector.value + "_region_2021_22_vs_2022_23.html";
   });
 
   growthClimateZoneSelector.addEventListener('change',function(event) {
-    climateZonesIFrame.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/" + growthClimateZoneSelector.value + "_climazone_preCovid_vs_2021_22.html";
-    climateZonesIFrame2022.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/" + growthClimateZoneSelector.value + "_climazone_preCovid_vs_2022_23.html";
-    climateZonesIFrame2023.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/" + growthClimateZoneSelector.value + "_climazone_2021_22_vs_2022_23.html";
+    climateZonesIFrameGrowth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/" + growthClimateZoneSelector.value + "_climazone_preCovid_vs_2021_22.html";
+    climateZonesIFrame2022Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/" + growthClimateZoneSelector.value + "_climazone_preCovid_vs_2022_23.html";
+    climateZonesIFrame2023Growth.src = "../../assets/data/" + getCookie("archive") + "/growth_each_climatezone/" + growthClimateZoneSelector.value + "_climazone_2021_22_vs_2022_23.html";
   });
 
 </script>
