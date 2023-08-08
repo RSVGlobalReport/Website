@@ -1,0 +1,10 @@
+@media all and (min-width: 1200px) {
+  #main {
+    max-width: 1320px !important;
+  }
+}
+@media all and (min-width: 1650px) {
+  #main {
+    max-width: 1500px !important;
+  }
+}
