@@ -9,9 +9,9 @@ math: true
 mermaid: true
 ---
 
-{% assign default_archive="06-21-2023" %}
+{% assign default_archive="07-30-2023" %}
 
-{% assign archives = "06-21-2023 05-12-2023 04-18-2023 03-19-2023 02-02-2023" | split: " " %}
+{% assign archives = "07-30-2023 06-21-2023 05-12-2023 04-18-2023 03-19-2023 02-02-2023" | split: " " %}
 {% include archive_selector.html archives=archives %}
 
 ## RSV Cases By Hemisphere
