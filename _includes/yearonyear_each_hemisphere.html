@@ -5,11 +5,12 @@
     <iframe
       id="northernhemisphereyearly"
       title=""
-      src="../../assets/data/02-01-2023/yearOnyear_each_hemisphere/HemisphereYearly_Northern hemisphere.html"
+      src="{{ include.default_cdn }}02-01-2023/yearOnyear_each_hemisphere/HemisphereYearly_Northern hemisphere.html"
       frameborder="0"
       width="100%"
       height="600"
       allowtransparency
+      loading="lazy"
     ></iframe>
   </div>
 
@@ -19,11 +20,12 @@
     <iframe
       id="southernhemisphereyearly"
       title=""
-      src="../../assets/data/02-01-2023/yearOnyear_each_hemisphere/HemisphereYearly_Southern hemisphere.html"
+      src="{{ include.default_cdn }}02-01-2023/yearOnyear_each_hemisphere/HemisphereYearly_Southern hemisphere.html"
       frameborder="0"
       width="100%"
       height="600"
       allowtransparency
+      loading="lazy"
     ></iframe>
   </div>
 </div>
@@ -94,7 +96,7 @@
   }
 
   if(getCookie("archive") !== null) {
-    document.getElementById("northernhemisphereyearly").src = "../../assets/data/" + getCookie("archive") + "/yearOnyear_each_hemisphere/HemisphereYearly_Northern hemisphere.html"
-    document.getElementById("southernhemisphereyearly").src = "../../assets/data/" + getCookie("archive") + "/yearOnyear_each_hemisphere/HemisphereYearly_Southern hemisphere.html"
+    document.getElementById("northernhemisphereyearly").src = "{{ include.default_cdn }}" + getCookie("archive") + "/yearOnyear_each_hemisphere/HemisphereYearly_Northern hemisphere.html"
+    document.getElementById("southernhemisphereyearly").src = "{{ include.default_cdn }}" + getCookie("archive") + "/yearOnyear_each_hemisphere/HemisphereYearly_Southern hemisphere.html"
   }
 </script>

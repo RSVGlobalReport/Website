@@ -9,11 +9,12 @@
 <iframe
   id="weekly-region-selected-iframe"
   title=""
-  src="../../assets/data/02-01-2023/weekly_each_region/RegionWeekly_Africa.html"
+  src="{{ include.default_cdn }}02-01-2023/weekly_each_region/RegionWeekly_Africa.html"
   frameborder="0"
   width="100%"
   height="600"
   allowtransparency
+  loading="lazy"
 ></iframe>
 
 <script>
@@ -24,11 +25,11 @@
 
   if(getCookie("archive") !== null) {
     archiveValRegionWeekly = getCookie("archive");
-    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegionWeekly + "/weekly_each_region/RegionWeekly_Africa.html";
+    weeklyRegionIframe.src = "{{ include.default_cdn }}" + archiveValRegionWeekly + "/weekly_each_region/RegionWeekly_Africa.html";
   }
 
   weeklyRegionSelector.addEventListener('change',function(event) {
-    weeklyRegionIframe.src = "../../assets/data/" + archiveValRegionWeekly + "/weekly_each_region/RegionWeekly_" + weeklyRegionSelector.value + ".html";
+    weeklyRegionIframe.src = "{{ include.default_cdn }}" + archiveValRegionWeekly + "/weekly_each_region/RegionWeekly_" + weeklyRegionSelector.value + ".html";
   })
 
   function getCookie(name) {

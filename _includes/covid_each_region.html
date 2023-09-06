@@ -9,11 +9,12 @@
 <iframe
   id="region-selected-iframe"
   title=""
-  src="../../assets/data/02-01-2023/covid_each_region/RegionCovid_Africa.html"
+  src="{{ include.default_cdn }}02-01-2023/covid_each_region/RegionCovid_Africa.html"
   frameborder="0"
   width="100%"
   height="600"
   allowtransparency
+  loading="lazy"
 ></iframe>
 
 <script>
@@ -24,11 +25,11 @@
 
   if(getCookie("archive") !== null) {
     archiveValRegion = getCookie("archive");
-    regionIframe.src = "../../assets/data/" + archiveValRegion + "/covid_each_region/RegionCovid_Africa.html";
+    regionIframe.src = "{{ include.default_cdn }}" + archiveValRegion + "/covid_each_region/RegionCovid_Africa.html";
   }
 
   regionSelector.addEventListener('change',function(event) {
-    regionIframe.src = "../../assets/data/" + archiveValRegion + "/covid_each_region/RegionCovid_" + regionSelector.value + ".html";
+    regionIframe.src = "{{ include.default_cdn }}" + archiveValRegion + "/covid_each_region/RegionCovid_" + regionSelector.value + ".html";
   })
 
   function getCookie(name) {

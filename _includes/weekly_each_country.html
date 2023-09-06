@@ -46,11 +46,12 @@
 <iframe
   id="weekly-country-selected-iframe"
   title=""
-  src="../../assets/data/02-01-2023/weekly_each_country/CountryWeekly_Argentina.html"
+  src="{{ include.default_cdn }}02-01-2023/weekly_each_country/CountryWeekly_Argentina.html"
   frameborder="0"
   width="100%"
   height="600"
   allowtransparency
+  loading="lazy"
 ></iframe>
 
 <script>
@@ -61,11 +62,11 @@
 
   if(getCookie("archive") !== null) {
     weeklyCountryArchiveVal = getCookie("archive");
-    weeklyCountryIframe.src = "../../assets/data/" + weeklyCountryArchiveVal + "/weekly_each_country/CountryWeekly_Argentina.html";
+    weeklyCountryIframe.src = "{{ include.default_cdn }}" + weeklyCountryArchiveVal + "/weekly_each_country/CountryWeekly_Argentina.html";
   }
 
   countrySelector.addEventListener('change',function(event) {
-    weeklyCountryIframe.src = "../../assets/data/" + weeklyCountryArchiveVal + "/weekly_each_country/CountryWeekly_" + weeklyCountrySelector.value + ".html";
+    weeklyCountryIframe.src = "{{ include.default_cdn }}" + weeklyCountryArchiveVal + "/weekly_each_country/CountryWeekly_" + weeklyCountrySelector.value + ".html";
   })
 
   function getCookie(name) {

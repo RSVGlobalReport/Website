@@ -11,11 +11,12 @@
         <iframe
           id="northernhemispheretimeseries"
           title=""
-          src="../../assets/data/{{ include.default_archive }}/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
+          src="{{ include.default_cdn }}{{ include.default_archive }}/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
           frameborder="0"
           width="100%"
           height="600"
           allowtransparency
+          loading="lazy"
         ></iframe>
       </div>
 
@@ -30,11 +31,12 @@
         <iframe
           id="northernhemisphereweekly"
           title=""
-          src="../../assets/data/{{ include.default_archive }}/weekly_each_hemisphere/weekly_Northern hemisphere.html"
+          src="{{ include.default_cdn }}{{ include.default_archive }}/weekly_each_hemisphere/weekly_Northern hemisphere.html"
           frameborder="0"
           width="100%"
           height="600"
           allowtransparency
+          loading="lazy"
         ></iframe>
       </div>
 
@@ -49,11 +51,12 @@
         <iframe
           id="northernhemisphere"
           title=""
-          src="../../assets/data/{{ include.default_archive }}/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
+          src="{{ include.default_cdn }}{{ include.default_archive }}/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
           frameborder="0"
           width="100%"
           height="600"
           allowtransparency
+          loading="lazy"
         ></iframe>
       </div>
 
@@ -132,9 +135,9 @@
   }
 
   if(getCookie("archive") !== null) {
-    document.getElementById("northernhemisphere").src = "../../assets/data/" + getCookie("archive") + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
-    document.getElementById("northernhemisphereweekly").src = "../../assets/data/" + getCookie("archive") + "/weekly_each_hemisphere/weekly_Northern hemisphere.html"
-    document.getElementById("northernhemispheretimeseries").src = "../../assets/data/" + getCookie("archive") + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
+    document.getElementById("northernhemisphere").src = "{{ include.default_cdn }}" + getCookie("archive") + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html"
+    document.getElementById("northernhemisphereweekly").src = "{{ include.default_cdn }}" + getCookie("archive") + "/weekly_each_hemisphere/weekly_Northern hemisphere.html"
+    document.getElementById("northernhemispheretimeseries").src = "{{ include.default_cdn }}" + getCookie("archive") + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html"
   }
 </script>
 
@@ -150,13 +153,13 @@
 
   if(getCookie("archive") !== null) {
     archiveValHemisphere = getCookie("archive");
-    hemisphereCovidIframe.src = "../../assets/data/" + archiveValHemisphere + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html";
-    hemisphereWeeklyIframe.src = "../../assets/data/" + archiveValHemisphere + "/weekly_each_hemisphere/weekly_Northern hemisphere.html";
-    hemisphereTimeSeriesIframe.src = "../../assets/data/" + archiveValHemisphere + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html";
+    hemisphereCovidIframe.src = "{{ include.default_cdn }}" + archiveValHemisphere + "/covidimpact_each_hemisphere/covidimpact_Northern hemisphere.html";
+    hemisphereWeeklyIframe.src = "{{ include.default_cdn }}" + archiveValHemisphere + "/weekly_each_hemisphere/weekly_Northern hemisphere.html";
+    hemisphereTimeSeriesIframe.src = "{{ include.default_cdn }}" + archiveValHemisphere + "/timeseries_each_hemisphere/timeseries_Northern hemisphere.html";
   }
 
   hemisphereCovidSelector.addEventListener('change',function(event) {
-    hemisphereCovidIframe.src = "../../assets/data/" + archiveValHemisphere + "/covidimpact_each_hemisphere/covidimpact_" + hemisphereCovidSelector.value + " hemisphere.html";
+    hemisphereCovidIframe.src = "{{ include.default_cdn }}" + archiveValHemisphere + "/covidimpact_each_hemisphere/covidimpact_" + hemisphereCovidSelector.value + " hemisphere.html";
 
     if(hemisphereCovidSelector.value !== hemisphereWeeklySelector.value) {
       const opts = hemisphereWeeklySelector.options.length;
@@ -182,7 +185,7 @@
   });
 
   hemisphereWeeklySelector.addEventListener('change',function(event) {
-    hemisphereWeeklyIframe.src = "../../assets/data/" + archiveValHemisphere + "/weekly_each_hemisphere/weekly_" + hemisphereWeeklySelector.value + " hemisphere.html";
+    hemisphereWeeklyIframe.src = "{{ include.default_cdn }}" + archiveValHemisphere + "/weekly_each_hemisphere/weekly_" + hemisphereWeeklySelector.value + " hemisphere.html";
 
     if(hemisphereWeeklySelector.value !== hemisphereCovidSelector.value) {
       const opts = hemisphereCovidSelector.options.length;
@@ -208,7 +211,7 @@
   });
 
   hemisphereTimeSeriesSelector.addEventListener('change',function(event) {
-    hemisphereTimeSeriesIframe.src = "../../assets/data/" + archiveValHemisphere + "/timeseries_each_hemisphere/timeseries_" + hemisphereTimeSeriesSelector.value + " hemisphere.html";
+    hemisphereTimeSeriesIframe.src = "{{ include.default_cdn }}" + archiveValHemisphere + "/timeseries_each_hemisphere/timeseries_" + hemisphereTimeSeriesSelector.value + " hemisphere.html";
 
     if(hemisphereTimeSeriesSelector.value !== hemisphereCovidSelector.value) {
       const opts = hemisphereCovidSelector.options.length;
