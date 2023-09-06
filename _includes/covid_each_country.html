@@ -46,11 +46,12 @@
 <iframe
   id="country-selected-iframe"
   title=""
-  src="../../assets/data/02-01-2023/covid_each_country/CountryCovid_Argentina.html"
+  src="{{ include.default_cdn }}02-01-2023/covid_each_country/CountryCovid_Argentina.html"
   frameborder="0"
   width="100%"
   height="600"
   allowtransparency
+  loading="lazy"
 ></iframe>
 
 <script>
@@ -61,11 +62,11 @@
 
   if(getCookie("archive") !== null) {
     archiveVal = getCookie("archive");
-    countryIframe.src = "../../assets/data/" + archiveVal + "/covid_each_country/CountryCovid_Argentina.html";
+    countryIframe.src = "{{ include.default_cdn }}" + archiveVal + "/covid_each_country/CountryCovid_Argentina.html";
   }
 
   countrySelector.addEventListener('change',function(event) {
-    countryIframe.src = "../../assets/data/" + archiveVal + "/covid_each_country/CountryCovid_" + countrySelector.value + ".html";
+    countryIframe.src = "{{ include.default_cdn }}" + archiveVal + "/covid_each_country/CountryCovid_" + countrySelector.value + ".html";
   })
 
   function getCookie(name) {

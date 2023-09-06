@@ -51,11 +51,12 @@
     <iframe
       id="time-series-selected-iframe"
       title=""
-      src="../../assets/data/{{ include.default_archive }}/timeseries_each_country/timeseries_Argentina.html"
+      src="{{ include.default_cdn }}{{ include.default_archive }}/timeseries_each_country/timeseries_Argentina.html"
       frameborder="0"
       width="100%"
       height="600"
       allowtransparency
+      loading="lazy"
     ></iframe>
   </div>
 
@@ -111,11 +112,12 @@
     <iframe
       id="weekly-country-selected-iframe"
       title=""
-      src="../../assets/data/{{ include.default_archive }}/weekly_each_country/weekly_Argentina.html"
+      src="{{ include.default_cdn }}{{ include.default_archive }}/weekly_each_country/weekly_Argentina.html"
       frameborder="0"
       width="100%"
       height="600"
       allowtransparency
+      loading="lazy"
     ></iframe>
   </div>
 
@@ -171,11 +173,12 @@
     <iframe
       id="country-selected-iframe"
       title=""
-      src="../../assets/data/{{ include.default_archive }}/covidimpact_each_country/covidimpact_Argentina.html"
+      src="{{ include.default_cdn }}{{ include.default_archive }}/covidimpact_each_country/covidimpact_Argentina.html"
       frameborder="0"
       width="100%"
       height="600"
       allowtransparency
+      loading="lazy"
     ></iframe>
   </div>
 </div>
@@ -251,13 +254,13 @@
 
   if(getCookie("archive") !== null) {
     archiveVal = getCookie("archive");
-    countryIframe.src = "../../assets/data/" + archiveVal + "/covidimpact_each_country/covidimpact_Argentina.html";
-    weeklyCountryIframe.src = "../../assets/data/" + archiveVal + "/weekly_each_country/weekly_Argentina.html";
-    timeSeriesCountryIframe.src = "../../assets/data/" + archiveVal + "/timeseries_each_country/timeseries_Argentina.html";
+    countryIframe.src = "{{ include.default_cdn }}" + archiveVal + "/covidimpact_each_country/covidimpact_Argentina.html";
+    weeklyCountryIframe.src = "{{ include.default_cdn }}" + archiveVal + "/weekly_each_country/weekly_Argentina.html";
+    timeSeriesCountryIframe.src = "{{ include.default_cdn }}" + archiveVal + "/timeseries_each_country/timeseries_Argentina.html";
   }
 
   countrySelector.addEventListener('change',function(event) {
-    countryIframe.src = "../../assets/data/" + archiveVal + "/covidimpact_each_country/covidimpact_" + countrySelector.value + ".html";
+    countryIframe.src = "{{ include.default_cdn }}" + archiveVal + "/covidimpact_each_country/covidimpact_" + countrySelector.value + ".html";
 
     if(weeklyCountrySelector.value !== countrySelector.value) {
       const opts = weeklyCountrySelector.options.length;
@@ -283,7 +286,7 @@
   })
 
   weeklyCountrySelector.addEventListener('change',function(event) {
-    weeklyCountryIframe.src = "../../assets/data/" + archiveVal + "/weekly_each_country/weekly_" + weeklyCountrySelector.value + ".html";
+    weeklyCountryIframe.src = "{{ include.default_cdn }}" + archiveVal + "/weekly_each_country/weekly_" + weeklyCountrySelector.value + ".html";
 
     if(countrySelector.value !== weeklyCountrySelector.value) {
       const opts = countrySelector.options.length;
@@ -309,7 +312,7 @@
   })
 
   timeSeriesCountrySelector.addEventListener('change',function(event) {
-    timeSeriesCountryIframe.src = "../../assets/data/" + archiveVal + "/timeseries_each_country/timeseries_" + timeSeriesCountrySelector.value + ".html";
+    timeSeriesCountryIframe.src = "{{ include.default_cdn }}" + archiveVal + "/timeseries_each_country/timeseries_" + timeSeriesCountrySelector.value + ".html";
 
     if(countrySelector.value !== timeSeriesCountrySelector.value) {
       const opts = countrySelector.options.length;

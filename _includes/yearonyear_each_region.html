@@ -9,11 +9,12 @@
 <iframe
   id="yearly-region-selected-iframe"
   title=""
-  src="../../assets/data/02-01-2023/yearOnyear_each_region/RegionYearly_Africa.html"
+  src="{{ include.default_cdn }}02-01-2023/yearOnyear_each_region/RegionYearly_Africa.html"
   frameborder="0"
   width="100%"
   height="600"
   allowtransparency
+  loading="lazy"
 ></iframe>
 
 <script>
@@ -24,11 +25,11 @@
 
   if(getCookie("archive") !== null) {
     archiveValRegionYearly = getCookie("archive");
-    yearlyRegionIframe.src = "../../assets/data/" + archiveValRegionYearly + "/yearOnyear_each_region/RegionYearly_Africa.html";
+    yearlyRegionIframe.src = "{{ include.default_cdn }}" + archiveValRegionYearly + "/yearOnyear_each_region/RegionYearly_Africa.html";
   }
 
   yearlyRegionSelector.addEventListener('change',function(event) {
-    yearlyRegionIframe.src = "../../assets/data/" + archiveValRegionYearly + "/yearOnyear_each_region/RegionYearly_" + yearlyRegionSelector.value + ".html";
+    yearlyRegionIframe.src = "{{ include.default_cdn }}" + archiveValRegionYearly + "/yearOnyear_each_region/RegionYearly_" + yearlyRegionSelector.value + ".html";
   })
 
   function getCookie(name) {

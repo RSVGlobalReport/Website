@@ -1,11 +1,12 @@
 <iframe
           id="all-models-overview"
           title=""
-          src="../../assets/data/{{ include.default_archive }}/all_models_overview/schematicDiag.drawio.html"
+          src="{{ include.default_cdn }}{{ include.default_archive }}/all_models_overview/schematicDiag.drawio.html"
           frameborder="0"
           width="100%"
           height="600"
           allowtransparency
+          loading="lazy"
         ></iframe>
 
 <script>
@@ -23,7 +24,7 @@
   const allModelsOverview = document.getElementById('all-models-overview');
 
   if(getCookie("archive") !== null) {
-    allModelsOverview.src = "../../assets/data/" + getCookie("archive") + "/all_models_overview/schematicDiag.drawio.html"
+    allModelsOverview.src = "{{ include.default_cdn }}" + getCookie("archive") + "/all_models_overview/schematicDiag.drawio.html"
   }
 
 </script>
