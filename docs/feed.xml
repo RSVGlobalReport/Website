@@ -4,7 +4,7 @@
   <id>https://rsvglobalreport.github.io/dashboard/</id>
   <title>RSV Global</title>
   <subtitle>Understanding the patterns of global re-emergence of RSV following COVID19 pandemic</subtitle>
-  <updated>2024-07-23T02:01:39+00:00</updated>
+  <updated>2024-07-23T02:16:40+00:00</updated>
   <author>
     <name>Weinberger Lab</name>
     <uri>https://rsvglobalreport.github.io/dashboard/</uri>
@@ -24,7 +24,7 @@
     <link href="https://rsvglobalreport.github.io/dashboard/posts/dashboard/" rel="alternate" type="text/html" title="Global re-emergence of RSV following COVID-19 pandemic" />
     <published>2023-01-24T03:33:00+00:00</published>
   
-    <updated>2024-07-23T01:59:05+00:00</updated>
+    <updated>2024-07-23T02:14:38+00:00</updated>
   
     <id>https://rsvglobalreport.github.io/dashboard/posts/dashboard/</id>
     <content src="https://rsvglobalreport.github.io/dashboard/posts/dashboard/" />
@@ -52,6 +52,8 @@
 
   Version Select:
   
+    
+    06-30-2024
     
     05-30-2024
     
@@ -92,9 +94,7 @@ RSV Cases By Hemisphere
 
     
       
-      Time Series
-      
-...
+     ...
     </summary>
   
 
