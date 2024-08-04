@@ -9,10 +9,10 @@ math: true
 mermaid: true
 ---
 
-{% assign default_archive="06-30-2024" %}
+{% assign default_archive="07-31-2024" %}
 {% assign default_cdn="https://rsvwr.nyc3.cdn.digitaloceanspaces.com/" %}
 
-{% assign archives = "06-30-2024 05-30-2024 04-30-2024 03-30-2024 02-27-2024 12-31-2023 11-30-2023 10-31-2023 09-30-2023 08-31-2023 07-30-2023 06-21-2023 05-12-2023 04-18-2023 03-19-2023 02-02-2023" | split: " " %}
+{% assign archives = "07-31-2024 06-30-2024 05-30-2024 04-30-2024 03-30-2024 02-27-2024 12-31-2023 11-30-2023 10-31-2023 09-30-2023 08-31-2023 07-30-2023 06-21-2023 05-12-2023 04-18-2023 03-19-2023 02-02-2023" | split: " " %}
 {% include archive_selector.html archives=archives %}
 
 ## RSV Cases By Hemisphere
